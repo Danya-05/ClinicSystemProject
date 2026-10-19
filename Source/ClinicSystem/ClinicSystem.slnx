@@ -1,3 +1,5 @@
 <Solution>
+  <Project Path="ClinicBusinessLayer/ClinicBusinessLayer.csproj" Id="56c0c76d-333a-4245-a45a-6512caf3c903" />
+  <Project Path="ClinicDataAccessLayer/ClinicDataAccessLayer.csproj" Id="5c728790-557d-4787-a00b-1aed519ce222" />
   <Project Path="ClinicSystem.Console/ClinicSystem.Console.csproj" />
 </Solution>
