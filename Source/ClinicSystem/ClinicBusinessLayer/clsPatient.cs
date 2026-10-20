@@ -1,5 +1,6 @@
-﻿using System;
-using ClinicDataAccessLayer;
+﻿using ClinicDataAccessLayer;
+using System;
+using System.Data;
 
 namespace ClinicBusinessLayer
 {
@@ -8,7 +9,7 @@ namespace ClinicBusinessLayer
         public enum enMode { AddNew = 1, Update = 2 }
         public enMode Mode { get; set; }
 
-        public int ID { get; set; }
+        public int PatientID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string PhoneNumber { get; set; }
@@ -17,11 +18,64 @@ namespace ClinicBusinessLayer
         public string ChronicDiseases { get; set; }
         public string Allergies { get; set; }
 
+        public clsPatient()
+        {
+            this.PatientID = -1;
+            this.FirstName = "";
+            this.LastName = "";
+            this.PhoneNumber = "";
+            this.BirthDate = null;
+            this.Gender = "";
+            this.ChronicDiseases = "";
+            this.Allergies = "";
+
+            this.Mode = enMode.AddNew;
+        }
+
+
+
         private bool _AddNewPatient()
         {
-            this.ID = clsPatientDataAccess.AddNewPatient(this.FirstName, this.LastName, this.PhoneNumber,
+            this.PatientID = clsPatientDataAccess.AddNewPatient(this.FirstName, this.LastName, this.PhoneNumber,
                                             this.BirthDate, this.Gender, this.ChronicDiseases, this.Allergies);
-            return (this.ID != -1);
+            return (this.PatientID != -1);
         }
+
+        public static bool DeletePatient(int PatientID)
+        {
+            return clsPatientDataAccess.DeletePatient(PatientID);
+        }
+
+        private bool _UpdatePatient()
+        {
+            return clsPatientDataAccess.UpdatePatient(this.PatientID, this.FirstName, this.LastName, this.PhoneNumber,
+                                    this.BirthDate, this.Gender, this.ChronicDiseases, this.Allergies);
+        }
+
+        public bool Save()
+        {
+            switch (Mode)
+            {
+                case enMode.AddNew:
+                    if (_AddNewPatient())
+                    {
+                        Mode = enMode.Update;
+                        return true;
+                    }
+                    else
+                        return false;
+
+                case enMode.Update:
+                    return _UpdatePatient();
+
+            }
+            return false;
+        }
+
+        public static DataTable GetAllPatients()
+        {
+            return clsPatientDataAccess.GetAllPationts();
+        }
+
     }
 }
