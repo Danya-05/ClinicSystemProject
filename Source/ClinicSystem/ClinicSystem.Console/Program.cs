@@ -18,17 +18,19 @@ namespace ClinicSystem.ConsoleApp
             //p1.Allergies = null;
             //p1.ChronicDiseases = null;
 
-            DataTable dt = clsPatient.GetAllPatients();
+            //string ss = Console.ReadLine();
 
-            foreach (DataRow row in dt.Rows)
-            {
-                foreach (DataColumn col in dt.Columns)
-                {
-                    Console.Write($"{col.ColumnName}: {row[col]} | ");
-                }
+            //DataTable dt = clsPatient.SearchPatients(ss);
 
-                Console.WriteLine();
-            }
+            //foreach (DataRow row in dt.Rows)
+            //{
+            //    foreach (DataColumn col in dt.Columns)
+            //    {
+            //        Console.Write($"{row[col]} | ");
+            //    }
+
+            //    Console.WriteLine();
+            //}
 
         }
     }

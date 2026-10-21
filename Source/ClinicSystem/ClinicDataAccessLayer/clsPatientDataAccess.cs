@@ -153,8 +153,39 @@ namespace ClinicDataAccessLayer
             return dt;
         }
 
+        public static DataTable SearchPatients(string searchText)
+        {
+            DataTable dt = new DataTable();
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
 
+            string query = @"
+                SELECT * FROM Patients_TBL
+                WHERE
+                PAT_FirstName LIKE @Search
+                OR PAT_LastName LIKE @Search
+                OR PAT_PhoneNumber LIKE @Search
+                OR CAST(Patient_ID AS NVARCHAR(20)) LIKE @Search";
 
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@Search", "%" + searchText.Trim() + "%");
+
+            try
+            {
+                connection.Open();
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+
+                adapter.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error : " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return dt;
+        }
 
 
     }

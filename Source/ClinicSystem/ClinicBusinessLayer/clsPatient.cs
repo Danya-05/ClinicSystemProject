@@ -32,8 +32,6 @@ namespace ClinicBusinessLayer
             this.Mode = enMode.AddNew;
         }
 
-
-
         private bool _AddNewPatient()
         {
             this.PatientID = clsPatientDataAccess.AddNewPatient(this.FirstName, this.LastName, this.PhoneNumber,
@@ -41,15 +39,15 @@ namespace ClinicBusinessLayer
             return (this.PatientID != -1);
         }
 
-        public static bool DeletePatient(int PatientID)
-        {
-            return clsPatientDataAccess.DeletePatient(PatientID);
-        }
-
         private bool _UpdatePatient()
         {
             return clsPatientDataAccess.UpdatePatient(this.PatientID, this.FirstName, this.LastName, this.PhoneNumber,
                                     this.BirthDate, this.Gender, this.ChronicDiseases, this.Allergies);
+        }
+
+        public static bool DeletePatient(int PatientID)
+        {
+            return clsPatientDataAccess.DeletePatient(PatientID);
         }
 
         public bool Save()
@@ -75,6 +73,11 @@ namespace ClinicBusinessLayer
         public static DataTable GetAllPatients()
         {
             return clsPatientDataAccess.GetAllPationts();
+        }
+
+        public static DataTable SearchPatients(string searchText)
+        {
+            return clsPatientDataAccess.SearchPatients(searchText);
         }
 
     }
