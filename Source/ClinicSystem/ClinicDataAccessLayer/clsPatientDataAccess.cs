@@ -159,7 +159,7 @@ namespace ClinicDataAccessLayer
 
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
 
-            string query = @"select PAT_FirstName +' '+ PAT_LastName from Patients_TBL";
+            string query = @"select PAT_FirstName +' '+ PAT_LastName AS PatientName from Patients_TBL";
 
             SqlCommand command = new SqlCommand(query, connection);
 

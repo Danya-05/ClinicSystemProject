@@ -226,7 +226,7 @@ namespace ClinicDataAccessLayer
 
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
 
-            string query = @"select (User_FirstName+' '+User_LastName) from Users_TBL
+            string query = @"select User_FirstName + ' '+ User_LastName AS DoctorName from Users_TBL
                                      where User_Type = 'Doctor'";
 
             SqlCommand command = new SqlCommand(query, connection);
@@ -259,7 +259,7 @@ namespace ClinicDataAccessLayer
 
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
 
-            string query = @"select Doctor_ID,User_FirstName,User_LastName,Doctor_Specialty,User_PhoneNumber 
+            string query = @"select u.User_ID,Doctor_ID,User_FirstName,User_LastName,Doctor_Specialty,User_PhoneNumber 
                              from Doctors_TBL d inner join Users_TBL u 
                              on u.User_ID= d.User_ID";
 
