@@ -9,40 +9,55 @@ namespace ClinicBusinessLayer
         public enum enMode { AddNew = 1, Update = 2 }
         public enMode Mode { get; set; }
 
-        public int PatientID { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string PhoneNumber { get; set; }
-        public DateTime? BirthDate { get; set; }
-        public string Gender { get; set; }
-        public string ChronicDiseases { get; set; }
-        public string Allergies { get; set; }
+        public int Patient_ID { get; set; }
+        public string PAT_FirstName { get; set; }
+        public string PAT_LastName { get; set; }
+        public string PAT_PhoneNumber { get; set; }
+        public DateTime? PAT_BirthDate { get; set; }
+        public string PAT_Gender { get; set; }
+        public string PAT_ChronicDiseases { get; set; }
+        public string PAT_Allergies { get; set; }
 
         public clsPatient()
         {
-            this.PatientID = -1;
-            this.FirstName = "";
-            this.LastName = "";
-            this.PhoneNumber = "";
-            this.BirthDate = null;
-            this.Gender = "";
-            this.ChronicDiseases = "";
-            this.Allergies = "";
+            this.Patient_ID = -1;
+            this.PAT_FirstName = "";
+            this.PAT_LastName = "";
+            this.PAT_PhoneNumber = "";
+            this.PAT_BirthDate = null;
+            this.PAT_Gender = "";
+            this.PAT_ChronicDiseases = "";
+            this.PAT_Allergies = "";
 
             this.Mode = enMode.AddNew;
         }
 
+        public clsPatient(int Patient_ID,string PAT_FirstName,string PAT_LastName,string PAT_PhoneNumber,
+            DateTime? PAT_BirthDate,string PAT_Gender,string PAT_ChronicDiseases, string PAT_Allergies)
+        {
+            this.Patient_ID = Patient_ID;
+            this.PAT_FirstName = PAT_FirstName;
+            this.PAT_LastName = PAT_LastName;
+            this.PAT_PhoneNumber = PAT_PhoneNumber;
+            this.PAT_BirthDate = PAT_BirthDate;
+            this.PAT_Gender = PAT_Gender;
+            this.PAT_ChronicDiseases = PAT_ChronicDiseases;
+            this.PAT_Allergies = PAT_Allergies;
+
+            this.Mode = enMode.Update;
+        }
+
         private bool _AddNewPatient()
         {
-            this.PatientID = clsPatientDataAccess.AddNewPatient(this.FirstName, this.LastName, this.PhoneNumber,
-                                            this.BirthDate, this.Gender, this.ChronicDiseases, this.Allergies);
-            return (this.PatientID != -1);
+            this.Patient_ID = clsPatientDataAccess.AddNewPatient(this.PAT_FirstName, this.PAT_LastName, this.PAT_PhoneNumber,
+                                            this.PAT_BirthDate, this.PAT_Gender, this.PAT_ChronicDiseases, this.PAT_Allergies);
+            return (this.Patient_ID != -1);
         }
 
         private bool _UpdatePatient()
         {
-            return clsPatientDataAccess.UpdatePatient(this.PatientID, this.FirstName, this.LastName, this.PhoneNumber,
-                                    this.BirthDate, this.Gender, this.ChronicDiseases, this.Allergies);
+            return clsPatientDataAccess.UpdatePatient(this.Patient_ID, this.PAT_FirstName, this.PAT_LastName, this.PAT_PhoneNumber,
+                                    this.PAT_BirthDate, this.PAT_Gender, this.PAT_ChronicDiseases, this.PAT_Allergies);
         }
 
         public static bool DeletePatient(int PatientID)
@@ -72,7 +87,12 @@ namespace ClinicBusinessLayer
 
         public static DataTable GetAllPatients()
         {
-            return clsPatientDataAccess.GetAllPationts();
+            return clsPatientDataAccess.GetAllPatients();
+        }
+
+        public static DataTable GetPatientsName()
+        {
+            return clsPatientDataAccess.GetPatientsName();
         }
 
         public static DataTable SearchPatients(string searchText)
