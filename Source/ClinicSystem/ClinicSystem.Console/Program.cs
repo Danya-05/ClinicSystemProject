@@ -34,7 +34,7 @@ namespace ClinicSystem.ConsoleApp
 
             //clsUser u1 = new clsUser(3,"Doctor2","654321", "Doctor","Sara","Ali", "0793333333");
 
-            DataTable dt = clsUser.GetAllUsersName();
+            DataTable dt = clsDoctor.GetAllDoctors();
             foreach (DataRow row in dt.Rows)
             {
                 foreach (DataColumn col in dt.Columns)

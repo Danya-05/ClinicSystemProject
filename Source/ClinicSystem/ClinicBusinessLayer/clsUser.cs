@@ -87,10 +87,31 @@ namespace ClinicBusinessLayer
             return clsUserDataAccess.GetAllUsersName();
         }
 
+        public static DataTable GetAllUsers()
+        {
+            return clsUserDataAccess.GetAllUsers();
+        }
+
+        public static DataTable SearchUser(string searchText)
+        {
+            return clsUserDataAccess.SearchUser(searchText);
+        }
+
+        public static DataTable GetAllDoctorsName()
+        {
+            return clsUserDataAccess.GetAllDoctorsName();
+        }
+
+        public static DataTable GetAllDoctors()
+        {
+            return clsUserDataAccess.GetAllDoctors();
+        }
+
         public static bool Login(string User_Name,string Password)
         {
             return (clsUserDataAccess.Login(User_Name,Password));
         }
+
 
     }
 }
