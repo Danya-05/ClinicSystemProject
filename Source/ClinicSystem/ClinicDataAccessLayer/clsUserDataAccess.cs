@@ -124,66 +124,16 @@ namespace ClinicDataAccessLayer
 
         public static DataTable GetAllUsersName()
         {
-            DataTable dt = new DataTable();
-
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
-
             string query = @"SELECT User_Name FROM Users_TBL";
 
-            SqlCommand command = new SqlCommand(query, connection);
-
-            try
-            {
-                connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
-
-                if (reader.HasRows)
-                {
-                    dt.Load(reader);
-                }
-                reader.Close();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error : " + ex.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
-            return dt;
+            return clsDataAccessSettings.GetData(query);
         }
 
         public static DataTable GetAllUsers()
         {
-            DataTable dt = new DataTable();
-
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
-
             string query = @"SELECT * FROM Users_TBL";
 
-            SqlCommand command = new SqlCommand(query, connection);
-
-            try
-            {
-                connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
-
-                if (reader.HasRows)
-                {
-                    dt.Load(reader);
-                }
-                reader.Close();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error : " + ex.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
-            return dt;
+            return clsDataAccessSettings.GetData(query);
         }
 
         public static DataTable SearchUser(string searchText)
@@ -222,69 +172,19 @@ namespace ClinicDataAccessLayer
 
         public static DataTable GetAllDoctorsName()
         {
-            DataTable dt = new DataTable();
-
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
-
             string query = @"select (User_FirstName+' '+User_LastName) from Users_TBL
                                      where User_Type = 'Doctor'";
 
-            SqlCommand command = new SqlCommand(query, connection);
-
-            try
-            {
-                connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
-
-                if (reader.HasRows)
-                {
-                    dt.Load(reader);
-                }
-                reader.Close();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error : " + ex.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
-            return dt;
+            return clsDataAccessSettings.GetData(query);
         }
 
         public static DataTable GetAllDoctors()
         {
-            DataTable dt = new DataTable();
-
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
-
             string query = @"select Doctor_ID,User_FirstName,User_LastName,Doctor_Specialty,User_PhoneNumber 
                              from Doctors_TBL d inner join Users_TBL u 
                              on u.User_ID= d.User_ID";
 
-            SqlCommand command = new SqlCommand(query, connection);
-
-            try
-            {
-                connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
-
-                if (reader.HasRows)
-                {
-                    dt.Load(reader);
-                }
-                reader.Close();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error : " + ex.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
-            return dt;
+            return clsDataAccessSettings.GetData(query);
         }
 
         public static bool Login(string User_Name, string password)
