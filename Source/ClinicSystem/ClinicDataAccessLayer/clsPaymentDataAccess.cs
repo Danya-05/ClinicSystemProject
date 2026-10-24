@@ -11,7 +11,7 @@ namespace ClinicDataAccessLayer
     public class clsPaymentDataAccess
     {
         public static int AddNewPayment(DateTime Payment_Date, TimeSpan Payment_Time,
-                float Amount_Paid, string Payment_Method, int Patient_ID)
+                decimal Amount_Paid, string Payment_Method, int Patient_ID)
         {
             int Pyment_ID = -1;
 
@@ -59,7 +59,7 @@ namespace ClinicDataAccessLayer
             string query = @"Delete from Payments_TBL where Payment_ID = @Payment_ID";
 
             SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("@PatientID", Payment_ID);
+            command.Parameters.AddWithValue("@Payment_ID", Payment_ID);
 
             try
             {
@@ -128,14 +128,40 @@ namespace ClinicDataAccessLayer
             return dt;
         }
 
-        public static DataTable GetMonthlyEarnings()
+        public static decimal GetMonthlyEarnings()
         {
+            decimal TotalEarnings = -1;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
+
             string query = @"SELECT ISNULL(SUM(Amount_Paid), 0) AS TotalEarnings
                             FROM Payments_TBL
                             WHERE Payment_Date >= DATEFROMPARTS(YEAR(GETDATE()), MONTH(GETDATE()), 1)
-                            AND Payment_Date < DATEADD(MONTH, 1, DATEFROMPARTS(YEAR(GETDATE()), MONTH(GETDATE()), 1));"
+                            AND Payment_Date < DATEADD(MONTH, 1, DATEFROMPARTS(YEAR(GETDATE()), MONTH(GETDATE()), 1))";
+            
+            SqlCommand command = new SqlCommand(query, connection);
 
-            return clsDataAccessSettings.GetData(query);
+            try
+            {
+                connection.Open();
+                object result = command.ExecuteScalar();
+
+                if (result != null && decimal.TryParse(result.ToString(), out decimal InsertedID))
+                {
+                    TotalEarnings = InsertedID;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Add New Error : " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+
+            return TotalEarnings;
         }
 
         public static DataTable GetAllPatientsFinancialSummary() 
