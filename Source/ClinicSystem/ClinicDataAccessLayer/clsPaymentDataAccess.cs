@@ -79,10 +79,6 @@ namespace ClinicDataAccessLayer
 
         public static DataTable GetAllPayments()
         {
-            DataTable dt = new DataTable();
-
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
-
             string query = @"select pay.Payment_ID, p.PAT_FirstName+' '+p.PAT_LastName as PatientName,pay.Amount_Paid,
                                 pay.Payment_Date,pay.Payment_Time,pay.Payment_Method
                             from Payments_TBL pay 
@@ -90,28 +86,7 @@ namespace ClinicDataAccessLayer
                             on pay.Patient_ID = p.Patient_ID
                             order by pay.Payment_Date DESC, pay.Payment_Time DESC";
 
-            SqlCommand command = new SqlCommand(query, connection);
-
-            try
-            {
-                connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
-
-                if (reader.HasRows)
-                {
-                    dt.Load(reader);
-                }
-                reader.Close();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error : " + ex.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
-            return dt;
+            return clsDataAccessSettings.GetData(query);
         }
 
         public static DataTable GetAllPaymentForPatient(int Patient_ID)
@@ -153,36 +128,60 @@ namespace ClinicDataAccessLayer
             return dt;
         }
 
-        public static DataTable ShowPaymentsReport(string query)
+        public static DataTable GetMonthlyEarnings()
         {
-            DataTable dt = new DataTable();
+            string query = @"SELECT ISNULL(SUM(Amount_Paid), 0) AS TotalEarnings
+                            FROM Payments_TBL
+                            WHERE Payment_Date >= DATEFROMPARTS(YEAR(GETDATE()), MONTH(GETDATE()), 1)
+                            AND Payment_Date < DATEADD(MONTH, 1, DATEFROMPARTS(YEAR(GETDATE()), MONTH(GETDATE()), 1));"
 
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
-
-            SqlCommand command = new SqlCommand(query, connection);
-
-            try
-            {
-                connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
-
-                if (reader.HasRows)
-                {
-                    dt.Load(reader);
-                }
-                reader.Close();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error : " + ex.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
-            return dt;
+            return clsDataAccessSettings.GetData(query);
         }
 
+        public static DataTable GetAllPatientsFinancialSummary() 
+        {
+            string query = @"WITH TotalFees AS
+                            (
+                                SELECT
+                                    A.Patient_ID,
+                                    SUM(MV.MedicalVisit_Fee) AS Total_Fees
+                                FROM Appointments_TBL A
+                            
+                                INNER JOIN MedicalVisits_TBL MV
+                                ON A.Appointment_ID = MV.Appointment_ID
+                            
+                                GROUP BY A.Patient_ID
+                            ),
+                            TotalPayments AS
+                            (
+                                SELECT
+                                    Patient_ID,
+                                    SUM(Amount_Paid) AS Total_Paid
+                                FROM Payments_TBL
+                            
+                                GROUP BY Patient_ID
+                            )
+                            SELECT
+                                P.Patient_ID,
+                                (P.PAT_FirstName +' '+ P.PAT_LastName) as Patient_Name,
+                            
+                                ISNULL(F.Total_Fees, 0) AS Total_Fees,
+                            
+                                ISNULL(Pay.Total_Paid, 0) AS Total_Paid,
+                            
+                                ISNULL(F.Total_Fees, 0) -
+                                ISNULL(Pay.Total_Paid, 0) AS Remaining_Amount
+                            
+                            FROM Patients_TBL P
+                            
+                            LEFT JOIN TotalFees F
+                            ON P.Patient_ID = F.Patient_ID
+                            
+                            LEFT JOIN TotalPayments Pay
+                            ON P.Patient_ID = Pay.Patient_ID;";
+
+            return clsDataAccessSettings.GetData(query);
+        }
 
     }
 }
