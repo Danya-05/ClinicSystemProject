@@ -123,66 +123,16 @@ namespace ClinicDataAccessLayer
 
         public static DataTable GetAllPatients()
         {
-            DataTable dt = new DataTable();
-
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
-
             string query = @"Select * from Patients_TBL";
 
-            SqlCommand command = new SqlCommand(query, connection);
-
-            try
-            {
-                connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
-
-                if (reader.HasRows)
-                {
-                    dt.Load(reader);
-                }
-                reader.Close();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error : " + ex.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
-            return dt;
+            return clsDataAccessSettings.GetData(query);
         }
 
         public static DataTable GetPatientsName()
         {
-            DataTable dt = new DataTable();
-
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
-
             string query = @"select PAT_FirstName +' '+ PAT_LastName AS PatientName from Patients_TBL";
 
-            SqlCommand command = new SqlCommand(query, connection);
-
-            try
-            {
-                connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
-
-                if (reader.HasRows)
-                {
-                    dt.Load(reader);
-                }
-                reader.Close();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error : " + ex.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
-            return dt;
+            return clsDataAccessSettings.GetData(query);
         }
 
         public static DataTable SearchPatients(string searchText)

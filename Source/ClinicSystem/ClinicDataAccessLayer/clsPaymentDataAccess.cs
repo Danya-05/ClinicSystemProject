@@ -184,8 +184,5 @@ namespace ClinicDataAccessLayer
         }
 
 
-
-
-
     }
 }
