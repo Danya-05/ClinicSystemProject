@@ -212,5 +212,31 @@ namespace ClinicDataAccessLayer
             return (password == passwordHash);
         }
 
+        public static DataTable GetUserInfoByID(int User_ID)
+        {
+            DataTable dt = new DataTable();
+
+            using (SqlConnection connection =
+                new SqlConnection(clsDataAccessSettings.connectionString))
+            {
+                string query = @"SELECT *
+                         FROM Users_TBL
+                         WHERE User_ID = @User_ID";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@User_ID", User_ID);
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                    {
+                        adapter.Fill(dt);
+                    }
+                }
+            }
+
+            return dt;
+        }
+
+
     }
 }
