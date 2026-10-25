@@ -169,6 +169,81 @@ namespace ClinicDataAccessLayer
             return dt;
         }
 
+        public static decimal Total_Fees(int Patient_ID)
+        {
+            decimal TotalFees = 0;
+
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString))
+            {
+                string query = @"
+            SELECT ISNULL(SUM(MV.MedicalVisit_Fee), 0) as Total_Fees
+            FROM Appointments_TBL A
+            INNER JOIN MedicalVisits_TBL MV
+                ON A.Appointment_ID = MV.Appointment_ID
+            WHERE A.Patient_ID = @Patient_ID";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Patient_ID", Patient_ID);
+
+                    connection.Open();
+
+                    TotalFees = Convert.ToDecimal(command.ExecuteScalar());
+                }
+            }
+
+            return TotalFees;
+        }
+
+        public static decimal Total_Paid(int Patient_ID)
+        {
+            decimal TotalPaid = 0;
+
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString))
+            {
+                string query = @"
+            SELECT ISNULL(SUM(Amount_Paid), 0) as Total_Paid
+            FROM Payments_TBL
+            WHERE Patient_ID = @Patient_ID";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Patient_ID", Patient_ID);
+
+                    connection.Open();
+
+                    TotalPaid = Convert.ToDecimal(command.ExecuteScalar());
+                }
+            }
+
+            return TotalPaid;
+        }
+
+        public static DataTable GetPatientInfoByID(int Patient_ID)
+        {
+            DataTable dt = new DataTable();
+
+            using (SqlConnection connection =
+                new SqlConnection(clsDataAccessSettings.connectionString))
+            {
+                string query = @"SELECT *
+                         FROM Patients_TBL
+                         WHERE Patient_ID = @Patient_ID";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Patient_ID", Patient_ID);
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                    {
+                        adapter.Fill(dt);
+                    }
+                }
+            }
+
+            return dt;
+        }
+
 
     }
 }

@@ -17,6 +17,9 @@ namespace ClinicBusinessLayer
         public string PAT_Gender { get; set; }
         public string PAT_ChronicDiseases { get; set; }
         public string PAT_Allergies { get; set; }
+        public decimal Total_Fees { get; private set; }
+        public decimal Total_Paid { get; private set; }
+        public decimal Remaining_Amount { get; private set; }
 
         public clsPatient()
         {
@@ -28,6 +31,9 @@ namespace ClinicBusinessLayer
             this.PAT_Gender = "";
             this.PAT_ChronicDiseases = "";
             this.PAT_Allergies = "";
+            this.Total_Fees = clsPatientDataAccess.Total_Fees(this.Patient_ID);
+            this.Total_Paid = clsPatientDataAccess.Total_Paid(this.Patient_ID);
+            this.Remaining_Amount = Total_Fees - Total_Paid;
 
             this.Mode = enMode.AddNew;
         }
@@ -43,6 +49,9 @@ namespace ClinicBusinessLayer
             this.PAT_Gender = PAT_Gender;
             this.PAT_ChronicDiseases = PAT_ChronicDiseases;
             this.PAT_Allergies = PAT_Allergies;
+            this.Total_Fees = clsPatientDataAccess.Total_Fees(this.Patient_ID);
+            this.Total_Paid = clsPatientDataAccess.Total_Paid(this.Patient_ID);
+            this.Remaining_Amount = Total_Fees - Total_Paid;
 
             this.Mode = enMode.Update;
         }
@@ -98,6 +107,27 @@ namespace ClinicBusinessLayer
         public static DataTable SearchPatients(string searchText)
         {
             return clsPatientDataAccess.SearchPatients(searchText);
+        }
+
+        public static clsPatient Find(int Patient_ID)
+        {
+            DataTable dt = clsPatientDataAccess.GetPatientInfoByID(Patient_ID);
+
+            if (dt.Rows.Count == 0)
+                return null;
+
+            DataRow row = dt.Rows[0];
+
+            return new clsPatient(
+                Convert.ToInt32(row["Patient_ID"]),
+                row["PAT_FirstName"].ToString(),
+                row["PAT_LastName"].ToString(),
+                row["PAT_PhoneNumber"].ToString(),
+                row["PAT_BirthDate"] == DBNull.Value? (DateTime?)null : Convert.ToDateTime(row["PAT_BirthDate"]),
+                row["PAT_Gender"].ToString(),
+                row["PAT_ChronicDiseases"].ToString(),
+                row["PAT_Allergies"].ToString()
+            );
         }
 
     }
