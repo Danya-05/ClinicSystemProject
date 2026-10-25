@@ -8,8 +8,8 @@ namespace ClinicSystem.ConsoleApp
     {
         static void Main(string[] args)
         {
-            clsPatient p1 = clsPatient.Find(1);
-            Console.WriteLine(p1.Total_Fees); 
+            clsUser p1 = clsUser.Find(1);
+            Console.WriteLine(p1.User_FirstName); 
             
             //DataTable dt = clsPayment.GetAllPatientsFinancialSummary();
 

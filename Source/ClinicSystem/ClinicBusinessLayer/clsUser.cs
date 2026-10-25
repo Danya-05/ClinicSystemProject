@@ -112,6 +112,25 @@ namespace ClinicBusinessLayer
             return (clsUserDataAccess.Login(User_Name,Password));
         }
 
+        public static clsUser Find(int User_ID)
+        {
+            DataTable dt = clsUserDataAccess.GetUserInfoByID(User_ID);
+
+            if (dt.Rows.Count == 0)
+                return null;
+
+            DataRow row = dt.Rows[0];
+
+            return new clsUser(
+                Convert.ToInt32(row["User_ID"]),
+                row["User_Name"].ToString(),
+                row["User_Password"].ToString(),
+                row["User_Type"].ToString(),
+                row["User_FirstName"].ToString(),
+                row["User_LastName"].ToString(),
+                row["User_PhoneNumber"].ToString()
+            );
+        }
 
     }
 }
