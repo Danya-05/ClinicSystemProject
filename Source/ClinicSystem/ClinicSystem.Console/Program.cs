@@ -8,8 +8,12 @@ namespace ClinicSystem.ConsoleApp
     {
         static void Main(string[] args)
         {
-            clsUser p1 = clsUser.Find(1);
-            Console.WriteLine(p1.User_FirstName); 
+            clsInsurance p1 = new clsInsurance();
+            p1.Patient_ID = 4;
+            p1.Insurance_Rate = 15;
+            p1.Insurance_ExpiryDate = new DateTime(2027, 12, 31);
+            
+            Console.WriteLine(p1.UpdateInsurance()); 
             
             //DataTable dt = clsPayment.GetAllPatientsFinancialSummary();
 
