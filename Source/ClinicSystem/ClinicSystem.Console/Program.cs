@@ -8,24 +8,24 @@ namespace ClinicSystem.ConsoleApp
     {
         static void Main(string[] args)
         {
-            clsInsurance p1 = new clsInsurance();
-            p1.Patient_ID = 4;
-            p1.Insurance_Rate = 15;
-            p1.Insurance_ExpiryDate = new DateTime(2027, 12, 31);
-            
-            Console.WriteLine(p1.UpdateInsurance()); 
-            
-            //DataTable dt = clsPayment.GetAllPatientsFinancialSummary();
+            //clsAppointment p1 = clsAppointment.FindAppointment(1);
+            //p1.Appointment_Status = "Test";
 
-            //foreach (DataRow row in dt.Rows)
-            //{
-            //    foreach (DataColumn col in dt.Columns)
-            //    {
-            //        Console.Write($"{row[col]} | ");
-            //    }
+            //Console.WriteLine(clsAppointment.TotalCancelledAppointment()); 
 
-            //    Console.WriteLine();
-            //}
+           // string s = "2";
+
+            DataTable dt = clsAppointment.GetAppointmentsToday();
+
+            foreach (DataRow row in dt.Rows)
+            {
+                foreach (DataColumn col in dt.Columns)
+                {
+                    Console.Write($"{row[col]} | ");
+                }
+
+                Console.WriteLine();
+            }
 
 
 

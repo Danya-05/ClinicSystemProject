@@ -17,7 +17,7 @@ namespace ClinicDataAccessLayer
 
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
 
-            string query = @"Insert into Patients_TBL (Appointment_Date,Appointment_Time,Appointment_Status,Patient_ID,
+            string query = @"Insert into Appointments_TBL (Appointment_Date,Appointment_Time,Appointment_Status,Patient_ID,
                              Doctor_ID)
                         VALUES (@Appointment_Date,@Appointment_Time,@Appointment_Status,@Patient_ID,@Doctor_ID);
                         Select SCOPE_IDENTITY();";
@@ -60,7 +60,6 @@ namespace ClinicDataAccessLayer
 
             string query = @"Update Appointments_TBL set Appointment_Date = @Appointment_Date,
                                              Appointment_Time = @Appointment_Time,
-                                             PAT_PhoneNumber = @PhoneNumber,
                                              Appointment_Status = @Appointment_Status,
                                              Patient_ID = @Patient_ID,
                                              Doctor_ID = @Doctor_ID
@@ -92,55 +91,45 @@ namespace ClinicDataAccessLayer
             return (rowAffected > 0);
         }
 
-        public static bool CancelAppointment(int Appointment_ID)
+        public static DataTable GetAppointmentInfoByID(int Appointment_ID)
         {
-            int rowAffected = 0;
+            DataTable dt = new DataTable();
 
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
-
-            string query = @"UPDATE TableName
-                             SET Appointment_Status = 'Cancelled'
-                             WHERE Appointment_ID = @Appointment_ID";
-
-            SqlCommand command = new SqlCommand(query, connection);
-
-            command.Parameters.AddWithValue("@Appointment_ID", Appointment_ID);
-
-            try
+            using (SqlConnection connection =
+                new SqlConnection(clsDataAccessSettings.connectionString))
             {
-                connection.Open();
+                string query = @"SELECT *
+                         FROM Appointments_TBL
+                         WHERE Appointment_ID = @Appointment_ID";
 
-                rowAffected = command.ExecuteNonQuery();
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Appointment_ID", Appointment_ID);
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                    {
+                        adapter.Fill(dt);
+                    }
+                }
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Update Error : " + ex.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
-            return (rowAffected > 0);
+
+            return dt;
         }
 
-        public static int TotalScheduledAppointment()
+        public static int TotalScheduledAppointments()
         {
             int TotalAppointment = 0;
 
             using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString))
             {
-                string query = @"Select * from Appointments_TBL where Appointment_Status= 'Scheduled'";
+                string query = @"Select count(*) from Appointments_TBL where Appointment_Status= 'Scheduled'";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("@Patient_ID", TotalAppointment);
-
                     connection.Open();
-
                     TotalAppointment = Convert.ToInt32(command.ExecuteScalar());
                 }
             }
-
             return TotalAppointment;
         }
 
@@ -150,18 +139,14 @@ namespace ClinicDataAccessLayer
 
             using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString))
             {
-                string query = @"Select * from Appointments_TBL where Appointment_Status= 'Completed'";
+                string query = @"Select count(*) from Appointments_TBL where Appointment_Status= 'Completed'";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("@Patient_ID", TotalAppointment);
-
                     connection.Open();
-
                     TotalAppointment = Convert.ToInt32(command.ExecuteScalar());
                 }
             }
-
             return TotalAppointment;
         }
 
@@ -171,7 +156,7 @@ namespace ClinicDataAccessLayer
 
             using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString))
             {
-                string query = @"Select * from Appointments_TBL where Appointment_Status= 'Cancelled'";
+                string query = @"Select count(*) from Appointments_TBL where Appointment_Status= 'Cancelled'";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -243,7 +228,7 @@ namespace ClinicDataAccessLayer
             return clsDataAccessSettings.GetData(query);
         }
 
-        public static DataTable SearchAppointments(DateTime? Appointment_Date, TimeSpan? Appointment_Time, string Patient_Name, string Doctor_Name)
+        public static DataTable SearchAppointments(string searchText)
         {
             DataTable dt = new DataTable();
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
@@ -267,31 +252,19 @@ namespace ClinicDataAccessLayer
                             INNER JOIN Users_TBL U
                                 ON D.User_ID = U.User_ID
                             
-                            WHERE (@Appointment_Date IS NULL OR A.Appointment_Date = @Appointment_Date)
+                            WHERE CAST(A.Appointment_Date AS NVARCHAR(20)) LIKE @SearchText
 
-                              AND (@Appointment_Time IS NULL OR A.Appointment_Time = @Appointment_Time)
+                              OR CAST(A.Appointment_Time AS NVARCHAR(20)) LIKE @SearchText
                               
-                              AND (@Patient_Name IS NULL OR
-                                   CONCAT(P.PAT_FirstName, ' ', P.PAT_LastName) LIKE '%' + @Patient_Name + '%')
+                              OR CONCAT(P.PAT_FirstName, ' ', P.PAT_LastName) LIKE @searchText
                               
-                              AND (@Doctor_Name IS NULL OR
-                                   U.User_Name LIKE '%' + @Doctor_Name + '%')
+                              OR U.User_Name LIKE @searchText
                             ORDER BY
                                 A.Appointment_Date desc,
                                 A.Appointment_Time desc";
 
             SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("@Appointment_Date",
-                (object)Appointment_Date ?? DBNull.Value);
-
-            command.Parameters.AddWithValue("@Appointment_Time",
-                (object)Appointment_Time ?? DBNull.Value);
-
-            command.Parameters.AddWithValue("@Patient_Name",
-                string.IsNullOrWhiteSpace(Patient_Name) ? DBNull.Value : (object)Patient_Name.Trim());
-
-            command.Parameters.AddWithValue("@Doctor_Name",
-                string.IsNullOrWhiteSpace(Doctor_Name) ? DBNull.Value : (object)Doctor_Name.Trim());
+            command.Parameters.AddWithValue("@SearchText", "%" + searchText.Trim() + "%");
 
             try
             {
