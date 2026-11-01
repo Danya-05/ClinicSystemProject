@@ -178,7 +178,7 @@ namespace ClinicDataAccessLayer
                             CONCAT(P.PAT_FirstName, ' ', P.PAT_LastName) AS Patient_Name,
                             A.Appointment_Date,
                             A.Appointment_Time,
-                            U.User_Name AS Doctor_Name,
+                            CONCAT(U.User_FirstName, ' ', U.User_LastName) AS Doctor_Name,
                             A.Appointment_Status
 
                             FROM Appointments_TBL A
@@ -206,7 +206,7 @@ namespace ClinicDataAccessLayer
                             CONCAT(P.PAT_FirstName, ' ', P.PAT_LastName) AS Patient_Name,
                             A.Appointment_Date,
                             A.Appointment_Time,
-                            U.User_Name AS Doctor_Name,
+                            CONCAT(U.User_FirstName, ' ', U.User_LastName) AS Doctor_Name,
                             A.Appointment_Status
 
                             FROM Appointments_TBL A
@@ -238,7 +238,7 @@ namespace ClinicDataAccessLayer
                             CONCAT(P.PAT_FirstName, ' ', P.PAT_LastName) AS Patient_Name,
                             A.Appointment_Date,
                             A.Appointment_Time,
-                            U.User_Name AS Doctor_Name,
+                            CONCAT(U.User_FirstName, ' ', U.User_LastName) AS Doctor_Name,
                             A.Appointment_Status
 
                             FROM Appointments_TBL A
@@ -258,7 +258,7 @@ namespace ClinicDataAccessLayer
                               
                               OR CONCAT(P.PAT_FirstName, ' ', P.PAT_LastName) LIKE @searchText
                               
-                              OR U.User_Name LIKE @searchText
+                              OR CONCAT(U.User_FirstName, ' ', U.User_LastName) LIKE @SearchText
                             ORDER BY
                                 A.Appointment_Date desc,
                                 A.Appointment_Time desc";

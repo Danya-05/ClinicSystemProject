@@ -15,17 +15,17 @@ namespace ClinicSystem.ConsoleApp
 
            // string s = "2";
 
-            DataTable dt = clsAppointment.GetAppointmentsToday();
+            //DataTable dt = clsAppointment.GetAppointmentsToday();
 
-            foreach (DataRow row in dt.Rows)
-            {
-                foreach (DataColumn col in dt.Columns)
-                {
-                    Console.Write($"{row[col]} | ");
-                }
+            //foreach (DataRow row in dt.Rows)
+            //{
+            //    foreach (DataColumn col in dt.Columns)
+            //    {
+            //        Console.Write($"{row[col]} | ");
+            //    }
 
-                Console.WriteLine();
-            }
+            //    Console.WriteLine();
+            //}
 
 
 
