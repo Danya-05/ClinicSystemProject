@@ -20,17 +20,17 @@ namespace ClinicSystem.ConsoleApp
 
             // string s = "2";
 
-            DataTable dt = clsMedicalVisit.SearchMedicalVisits("10");
+            //DataTable dt = clsMedicalVisit.SearchMedicalVisits("10");
 
-            foreach (DataRow row in dt.Rows)
-            {
-                foreach (DataColumn col in dt.Columns)
-                {
-                    Console.Write($"{row[col]} | ");
-                }
+            //foreach (DataRow row in dt.Rows)
+            //{
+            //    foreach (DataColumn col in dt.Columns)
+            //    {
+            //        Console.Write($"{row[col]} | ");
+            //    }
 
-                Console.WriteLine();
-            }
+            //    Console.WriteLine();
+            //}
 
 
 

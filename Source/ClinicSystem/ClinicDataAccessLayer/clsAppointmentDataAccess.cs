@@ -91,6 +91,7 @@ namespace ClinicDataAccessLayer
             return (rowAffected > 0);
         }
 
+        // for find 
         public static DataTable GetAppointmentInfoByID(int Appointment_ID)
         {
             DataTable dt = new DataTable();
@@ -171,6 +172,7 @@ namespace ClinicDataAccessLayer
             return TotalAppointment;
         }
 
+        // for layout
         public static DataTable GetAllAppointments()
         {
             string query = @"SELECT
