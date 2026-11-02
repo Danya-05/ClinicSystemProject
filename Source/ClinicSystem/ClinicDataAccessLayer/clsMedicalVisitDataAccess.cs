@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ClinicDataAccessLayer
 {
-    public class MedicalVisitDataAccess
+    public class clsMedicalVisitDataAccess
     {
         public static int AddNewMedicalVisit(decimal MedicalVisit_Fee, int Appointment_ID)
         {
@@ -168,7 +168,7 @@ namespace ClinicDataAccessLayer
             return clsDataAccessSettings.GetData(query);
         }
 
-        public static DataTable SearchAppointments(string searchText)
+        public static DataTable SearchMedicalVisits(string searchText)
         {
             DataTable dt = new DataTable();
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);

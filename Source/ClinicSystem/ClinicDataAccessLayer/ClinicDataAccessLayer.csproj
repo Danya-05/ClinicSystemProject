@@ -50,6 +50,7 @@
     <Compile Include="clsPaymentDataAccess.cs" />
     <Compile Include="clsUserDataAccess.cs" />
     <Compile Include="clsInsuranceDataAccess.cs" />
+    <Compile Include="clsMedicalVisitDataAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
