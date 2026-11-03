@@ -8,19 +8,13 @@ namespace ClinicSystem.ConsoleApp
     {
         static void Main(string[] args)
         {
-            //clsMedicalVisit p1 =  clsMedicalVisit.FindMedicalVisit(10002);
+            //clsPrescription p1 = clsPrescription.FindPrescription(10002);
+            //p1.PRE_Medicine = "Amoclan, Ketesse";
 
-            //p1.MedicalVisit_Fee = 5;
-            //p1.Save();
+            //Console.WriteLine(p1.UpdateThisPrescription());
+            //Console.WriteLine(clsPrescription.DeletePrescription(2));
 
-
-            //p1.Appointment_Status = "Test";
-
-            //Console.WriteLine(clsAppointment.TotalCancelledAppointment()); 
-
-            // string s = "2";
-
-            //DataTable dt = clsMedicalVisit.SearchMedicalVisits("10");
+            //DataTable dt = clsPrescription.ShowAllPrescriptionForPatient(1);
 
             //foreach (DataRow row in dt.Rows)
             //{
@@ -31,8 +25,6 @@ namespace ClinicSystem.ConsoleApp
 
             //    Console.WriteLine();
             //}
-
-
 
         }
     }

@@ -48,6 +48,7 @@
     <Compile Include="clsPatientDataAccess.cs" />
     <Compile Include="clsDataAccessSettings.cs" />
     <Compile Include="clsPaymentDataAccess.cs" />
+    <Compile Include="clsPrescriptionDataAccess.cs" />
     <Compile Include="clsUserDataAccess.cs" />
     <Compile Include="clsInsuranceDataAccess.cs" />
     <Compile Include="clsMedicalVisitDataAccess.cs" />

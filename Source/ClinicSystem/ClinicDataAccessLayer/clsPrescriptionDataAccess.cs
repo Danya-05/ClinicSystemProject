@@ -156,8 +156,8 @@ namespace ClinicDataAccessLayer
                                       ON A.Appointment_ID = M.Appointment_ID
 
                                   INNER JOIN Patients_TBL PA
-                                      ON PA.Patient_ID = @Patient_ID
-                             WHERE PA.Patient_ID = 2    
+                                      ON PA.Patient_ID = A.Patient_ID
+                             WHERE PA.Patient_ID = @Patient_ID   
                                   ORDER BY
                                       A.Appointment_Date desc,
                                       A.Appointment_Time desc;";
@@ -175,10 +175,6 @@ namespace ClinicDataAccessLayer
 
             return dt;
         }
-
-
-
-
 
 
     }
