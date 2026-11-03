@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsAppointmentDataAccess.cs" />
+    <Compile Include="clsDiagnosisDataAccess.cs" />
     <Compile Include="clsPatientDataAccess.cs" />
     <Compile Include="clsDataAccessSettings.cs" />
     <Compile Include="clsPaymentDataAccess.cs" />
