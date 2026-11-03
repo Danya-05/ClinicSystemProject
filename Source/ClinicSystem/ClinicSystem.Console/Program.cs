@@ -8,13 +8,14 @@ namespace ClinicSystem.ConsoleApp
     {
         static void Main(string[] args)
         {
-            //clsPrescription p1 = clsPrescription.FindPrescription(10002);
-            //p1.PRE_Medicine = "Amoclan, Ketesse";
+            //clsDiagnosis p1 = clsDiagnosis.FindDiagnosis(10002);
+            //p1.Diagnosis_Name = "التهاب لثة";
+            //Console.WriteLine(p1.UpdateThisDiagnosis());
 
             //Console.WriteLine(p1.UpdateThisPrescription());
-            //Console.WriteLine(clsPrescription.DeletePrescription(2));
+            //Console.WriteLine(clsDiagnosis.DeleteDiagnosis(10002));
 
-            //DataTable dt = clsPrescription.ShowAllPrescriptionForPatient(1);
+            //DataTable dt = clsDiagnosis.ShowAllDiagnosisForPatient(1);
 
             //foreach (DataRow row in dt.Rows)
             //{
