@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClinicSystem.UI.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,20 +26,25 @@ namespace ClinicSystem.UI
                 // Show Password
                 tbPassword.UseSystemPasswordChar = false;
                 tbPassword.IconLeft = Image.FromFile(
-                    @"C:\Users\abc\Desktop\ClinicSystem\Source\ClinicSystem.UI\Icons-Images\Screenshot 2026-11-07 215053.png");
+                    @"C:\Users\abc\Desktop\ClinicSystem\Source\ClinicSystem.UI\Icons-Images\eye-on.png");
             }
             else
             {
                 // Hide Password
                 tbPassword.UseSystemPasswordChar = true;
                 tbPassword.IconLeft = Image.FromFile(
-                    @"C:\Users\abc\Desktop\ClinicSystem\Source\ClinicSystem.UI\Icons-Images\Screenshot 2026-11-07 215045.png");
+                    @"C:\Users\abc\Desktop\ClinicSystem\Source\ClinicSystem.UI\Icons-Images\eye-off.png");
             }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
         }
     }
 }
