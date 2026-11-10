@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ClinicSystem.UI
 {
-    public partial class LoginForm : Form
+    public partial class frmLogin : Form
     {
-        public LoginForm()
+        public frmLogin()
         {
             InitializeComponent();
         }
@@ -20,18 +20,18 @@ namespace ClinicSystem.UI
 
         private void PasswordTB_IconLeftClick(object sender, EventArgs e)
         {
-            if (PasswordTB.UseSystemPasswordChar == true)
+            if (tbPassword.UseSystemPasswordChar == true)
             {
                 // Show Password
-                PasswordTB.UseSystemPasswordChar = false;
-                PasswordTB.IconLeft = Image.FromFile(
+                tbPassword.UseSystemPasswordChar = false;
+                tbPassword.IconLeft = Image.FromFile(
                     @"C:\Users\abc\Desktop\ClinicSystem\Source\ClinicSystem.UI\Icons-Images\Screenshot 2026-11-07 215053.png");
             }
             else
             {
                 // Hide Password
-                PasswordTB.UseSystemPasswordChar = true;
-                PasswordTB.IconLeft = Image.FromFile(
+                tbPassword.UseSystemPasswordChar = true;
+                tbPassword.IconLeft = Image.FromFile(
                     @"C:\Users\abc\Desktop\ClinicSystem\Source\ClinicSystem.UI\Icons-Images\Screenshot 2026-11-07 215045.png");
             }
         }

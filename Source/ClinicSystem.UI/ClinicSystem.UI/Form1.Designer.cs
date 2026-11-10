@@ -1,6 +1,6 @@
 ﻿namespace ClinicSystem.UI
 {
-    partial class LoginForm
+    partial class frmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,29 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
+            this.pbClinicLogo = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.PasswordTB = new Guna.UI2.WinForms.Guna2TextBox();
+            this.tbUsername = new Guna.UI2.WinForms.Guna2TextBox();
+            this.tbPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnLogin = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnClose = new Guna.UI2.WinForms.Guna2GradientButton();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClinicLogo)).BeginInit();
             this.SuspendLayout();
             // 
-            // guna2CirclePictureBox1
+            // pbClinicLogo
             // 
-            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(631, 76);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(256, 236);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox1.TabIndex = 0;
-            this.guna2CirclePictureBox1.TabStop = false;
-            this.guna2CirclePictureBox1.UseTransparentBackground = true;
+            this.pbClinicLogo.BackColor = System.Drawing.Color.Transparent;
+            this.pbClinicLogo.Image = ((System.Drawing.Image)(resources.GetObject("pbClinicLogo.Image")));
+            this.pbClinicLogo.ImageRotate = 0F;
+            this.pbClinicLogo.Location = new System.Drawing.Point(631, 76);
+            this.pbClinicLogo.Name = "pbClinicLogo";
+            this.pbClinicLogo.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.pbClinicLogo.Size = new System.Drawing.Size(256, 236);
+            this.pbClinicLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbClinicLogo.TabIndex = 0;
+            this.pbClinicLogo.TabStop = false;
+            this.pbClinicLogo.UseTransparentBackground = true;
             // 
             // guna2CustomGradientPanel1
             // 
@@ -59,63 +59,63 @@
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(3, 256);
             this.guna2CustomGradientPanel1.TabIndex = 1;
             // 
-            // guna2TextBox1
+            // tbUsername
             // 
-            this.guna2TextBox1.BorderColor = System.Drawing.SystemColors.Control;
-            this.guna2TextBox1.BorderThickness = 0;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.CustomizableEdges.BottomLeft = false;
-            this.guna2TextBox1.CustomizableEdges.BottomRight = false;
-            this.guna2TextBox1.CustomizableEdges.TopLeft = false;
-            this.guna2TextBox1.CustomizableEdges.TopRight = false;
-            this.guna2TextBox1.DefaultText = "اسم المستخدم";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("TheSansArabic Bold", 10F, System.Drawing.FontStyle.Bold);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(35)))), ((int)(((byte)(110)))));
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(109, 95);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(433, 38);
-            this.guna2TextBox1.TabIndex = 2;
+            this.tbUsername.BorderColor = System.Drawing.SystemColors.Control;
+            this.tbUsername.BorderThickness = 0;
+            this.tbUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbUsername.CustomizableEdges.BottomLeft = false;
+            this.tbUsername.CustomizableEdges.BottomRight = false;
+            this.tbUsername.CustomizableEdges.TopLeft = false;
+            this.tbUsername.CustomizableEdges.TopRight = false;
+            this.tbUsername.DefaultText = "اسم المستخدم";
+            this.tbUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.tbUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(35)))), ((int)(((byte)(110)))));
+            this.tbUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbUsername.Location = new System.Drawing.Point(109, 95);
+            this.tbUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbUsername.Name = "tbUsername";
+            this.tbUsername.PlaceholderText = "";
+            this.tbUsername.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbUsername.SelectedText = "";
+            this.tbUsername.Size = new System.Drawing.Size(433, 38);
+            this.tbUsername.TabIndex = 2;
             // 
-            // PasswordTB
+            // tbPassword
             // 
-            this.PasswordTB.BorderColor = System.Drawing.SystemColors.Control;
-            this.PasswordTB.BorderThickness = 0;
-            this.PasswordTB.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.PasswordTB.CustomizableEdges.BottomLeft = false;
-            this.PasswordTB.CustomizableEdges.BottomRight = false;
-            this.PasswordTB.CustomizableEdges.TopLeft = false;
-            this.PasswordTB.CustomizableEdges.TopRight = false;
-            this.PasswordTB.DefaultText = "كلمة المرور";
-            this.PasswordTB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.PasswordTB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.PasswordTB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.PasswordTB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.PasswordTB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.PasswordTB.Font = new System.Drawing.Font("TheSansArabic Bold", 10F, System.Drawing.FontStyle.Bold);
-            this.PasswordTB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(35)))), ((int)(((byte)(110)))));
-            this.PasswordTB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.PasswordTB.IconLeft = ((System.Drawing.Image)(resources.GetObject("PasswordTB.IconLeft")));
-            this.PasswordTB.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
-            this.PasswordTB.Location = new System.Drawing.Point(109, 166);
-            this.PasswordTB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.PasswordTB.Name = "PasswordTB";
-            this.PasswordTB.PlaceholderText = "";
-            this.PasswordTB.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.PasswordTB.SelectedText = "";
-            this.PasswordTB.Size = new System.Drawing.Size(433, 38);
-            this.PasswordTB.TabIndex = 3;
-            this.PasswordTB.UseSystemPasswordChar = true;
-            this.PasswordTB.IconLeftClick += new System.EventHandler(this.PasswordTB_IconLeftClick);
+            this.tbPassword.BorderColor = System.Drawing.SystemColors.Control;
+            this.tbPassword.BorderThickness = 0;
+            this.tbPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbPassword.CustomizableEdges.BottomLeft = false;
+            this.tbPassword.CustomizableEdges.BottomRight = false;
+            this.tbPassword.CustomizableEdges.TopLeft = false;
+            this.tbPassword.CustomizableEdges.TopRight = false;
+            this.tbPassword.DefaultText = "كلمة المرور";
+            this.tbPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.tbPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(35)))), ((int)(((byte)(110)))));
+            this.tbPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbPassword.IconLeft = ((System.Drawing.Image)(resources.GetObject("tbPassword.IconLeft")));
+            this.tbPassword.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
+            this.tbPassword.Location = new System.Drawing.Point(109, 166);
+            this.tbPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.PlaceholderText = "";
+            this.tbPassword.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbPassword.SelectedText = "";
+            this.tbPassword.Size = new System.Drawing.Size(433, 38);
+            this.tbPassword.TabIndex = 3;
+            this.tbPassword.UseSystemPasswordChar = true;
+            this.tbPassword.IconLeftClick += new System.EventHandler(this.PasswordTB_IconLeftClick);
             // 
             // btnLogin
             // 
@@ -128,7 +128,7 @@
             this.btnLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(130)))), ((int)(((byte)(171)))));
             this.btnLogin.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(35)))), ((int)(((byte)(110)))));
-            this.btnLogin.Font = new System.Drawing.Font("TheSansArabic Bold", 10F, System.Drawing.FontStyle.Bold);
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Location = new System.Drawing.Point(346, 242);
             this.btnLogin.Name = "btnLogin";
@@ -147,7 +147,7 @@
             this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnClose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(130)))), ((int)(((byte)(171)))));
             this.btnClose.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(35)))), ((int)(((byte)(110)))));
-            this.btnClose.Font = new System.Drawing.Font("TheSansArabic Bold", 10F, System.Drawing.FontStyle.Bold);
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.Location = new System.Drawing.Point(109, 242);
             this.btnClose.Name = "btnClose";
@@ -156,7 +156,7 @@
             this.btnClose.Text = "اغلاق";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // LoginForm
+            // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -165,25 +165,25 @@
             this.ClientSize = new System.Drawing.Size(922, 413);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.PasswordTB);
-            this.Controls.Add(this.guna2TextBox1);
+            this.Controls.Add(this.tbPassword);
+            this.Controls.Add(this.tbUsername);
             this.Controls.Add(this.guna2CustomGradientPanel1);
-            this.Controls.Add(this.guna2CirclePictureBox1);
+            this.Controls.Add(this.pbClinicLogo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "LoginForm";
+            this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "تسجيل دخول";
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClinicLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox pbClinicLogo;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2TextBox PasswordTB;
+        private Guna.UI2.WinForms.Guna2TextBox tbUsername;
+        private Guna.UI2.WinForms.Guna2TextBox tbPassword;
         private Guna.UI2.WinForms.Guna2GradientButton btnLogin;
         private Guna.UI2.WinForms.Guna2GradientButton btnClose;
     }
