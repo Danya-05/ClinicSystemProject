@@ -25,15 +25,13 @@ namespace ClinicSystem.UI
             {
                 // Show Password
                 tbPassword.UseSystemPasswordChar = false;
-                tbPassword.IconLeft = Image.FromFile(
-                    @"C:\Users\abc\Desktop\ClinicSystem\Source\ClinicSystem.UI\Icons-Images\eye-on.png");
+                tbPassword.IconLeft = Resources.eye_on;
             }
             else
             {
                 // Hide Password
                 tbPassword.UseSystemPasswordChar = true;
-                tbPassword.IconLeft = Image.FromFile(
-                    @"C:\Users\abc\Desktop\ClinicSystem\Source\ClinicSystem.UI\Icons-Images\eye-off.png");
+                tbPassword.IconLeft = Resources.eye_off;
             }
         }
 

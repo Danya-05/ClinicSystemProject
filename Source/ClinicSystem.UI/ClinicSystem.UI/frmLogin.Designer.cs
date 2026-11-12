@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.pbClinicLogo = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.tbUsername = new Guna.UI2.WinForms.Guna2TextBox();
@@ -41,7 +40,7 @@
             // pbClinicLogo
             // 
             this.pbClinicLogo.BackColor = System.Drawing.Color.Transparent;
-            this.pbClinicLogo.Image = ((System.Drawing.Image)(resources.GetObject("pbClinicLogo.Image")));
+            this.pbClinicLogo.Image = global::ClinicSystem.UI.Resources.Green_and_Blue_Modern_Healthcare_Logo;
             this.pbClinicLogo.ImageRotate = 0F;
             this.pbClinicLogo.Location = new System.Drawing.Point(631, 76);
             this.pbClinicLogo.Name = "pbClinicLogo";
@@ -104,7 +103,7 @@
             this.tbPassword.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(35)))), ((int)(((byte)(110)))));
             this.tbPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbPassword.IconLeft = ((System.Drawing.Image)(resources.GetObject("tbPassword.IconLeft")));
+            this.tbPassword.IconLeft = global::ClinicSystem.UI.Resources.eye_off;
             this.tbPassword.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
             this.tbPassword.Location = new System.Drawing.Point(109, 166);
             this.tbPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -161,7 +160,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::ClinicSystem.UI.Resources.LoginBackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(922, 413);
             this.Controls.Add(this.btnClose);
