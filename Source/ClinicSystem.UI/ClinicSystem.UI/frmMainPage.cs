@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClinicSystem.UI.UserControls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,8 +28,12 @@ namespace ClinicSystem.UI
             panelDesktop.Controls.Add(uc);
             uc.BringToFront();
 
-            //lblTitle.Text = childForm.Text;
+            lblTitle.Text = ((Button)btnSender).Text;
         }
-        
+
+        private void btnPatients_Click(object sender, EventArgs e)
+        {
+            OpenUserControl(new ucPatients(), sender);
+        }
     }
 }
