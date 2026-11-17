@@ -49,7 +49,7 @@
             // 
             // btnShowAllPayments
             // 
-            this.btnShowAllPayments.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnShowAllPayments.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnShowAllPayments.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnShowAllPayments.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnShowAllPayments.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -65,7 +65,7 @@
             // 
             // btnAddPayment
             // 
-            this.btnAddPayment.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAddPayment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddPayment.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnAddPayment.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnAddPayment.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -81,7 +81,7 @@
             // 
             // btnAddVisite
             // 
-            this.btnAddVisite.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAddVisite.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddVisite.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnAddVisite.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnAddVisite.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -97,7 +97,7 @@
             // 
             // btnAddAppointment
             // 
-            this.btnAddAppointment.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAddAppointment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddAppointment.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnAddAppointment.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnAddAppointment.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -113,7 +113,7 @@
             // 
             // btnShowMedicalFile
             // 
-            this.btnShowMedicalFile.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnShowMedicalFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnShowMedicalFile.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnShowMedicalFile.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnShowMedicalFile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -129,7 +129,7 @@
             // 
             // btnEditPatient
             // 
-            this.btnEditPatient.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEditPatient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEditPatient.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnEditPatient.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnEditPatient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -145,7 +145,7 @@
             // 
             // btnDeletePatient
             // 
-            this.btnDeletePatient.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnDeletePatient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDeletePatient.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDeletePatient.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnDeletePatient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -161,7 +161,7 @@
             // 
             // btnAddPatient
             // 
-            this.btnAddPatient.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAddPatient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddPatient.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnAddPatient.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnAddPatient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -177,7 +177,7 @@
             // 
             // lblNote
             // 
-            this.lblNote.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblNote.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNote.AutoSize = true;
             this.lblNote.Font = new System.Drawing.Font("Segoe UI Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNote.ForeColor = System.Drawing.Color.Black;
@@ -194,7 +194,9 @@
             this.guna2DataGridView1.AllowUserToOrderColumns = true;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.guna2DataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2DataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -263,7 +265,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClear.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnClear.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnClear.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
