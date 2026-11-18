@@ -65,6 +65,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucAppointments.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucAppointments.Designer.cs">
+      <DependentUpon>ucAppointments.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucPatients.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     <EmbeddedResource Include="Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucAppointments.resx">
+      <DependentUpon>ucAppointments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucPatients.resx">
       <DependentUpon>ucPatients.cs</DependentUpon>

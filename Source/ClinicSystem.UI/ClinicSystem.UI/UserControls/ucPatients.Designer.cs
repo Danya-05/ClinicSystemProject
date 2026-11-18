@@ -40,11 +40,11 @@
             this.btnDeletePatient = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddPatient = new Guna.UI2.WinForms.Guna2Button();
             this.lblNote = new System.Windows.Forms.Label();
-            this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.tbSearchPatient = new Guna.UI2.WinForms.Guna2TextBox();
+            this.dgvPatients = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.tbPatientSearchBar = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblPatientSearch = new System.Windows.Forms.Label();
             this.btnClear = new Guna.UI2.WinForms.Guna2Button();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPatients)).BeginInit();
             this.SuspendLayout();
             // 
             // btnShowAllPayments
@@ -189,12 +189,12 @@
             this.lblNote.Text = " حدد المريض من الجدول قبل الاختيار *";
             this.lblNote.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // guna2DataGridView1
+            // dgvPatients
             // 
-            this.guna2DataGridView1.AllowUserToOrderColumns = true;
+            this.dgvPatients.AllowUserToOrderColumns = true;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.guna2DataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvPatients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvPatients.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -204,9 +204,9 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.guna2DataGridView1.ColumnHeadersHeight = 4;
-            this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvPatients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvPatients.ColumnHeadersHeight = 4;
+            this.dgvPatients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -214,40 +214,41 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(162, 107);
-            this.guna2DataGridView1.Name = "guna2DataGridView1";
-            this.guna2DataGridView1.RowHeadersVisible = false;
-            this.guna2DataGridView1.RowTemplate.Height = 24;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(845, 324);
-            this.guna2DataGridView1.TabIndex = 16;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 24;
+            this.dgvPatients.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvPatients.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvPatients.Location = new System.Drawing.Point(162, 107);
+            this.dgvPatients.Name = "dgvPatients";
+            this.dgvPatients.RowHeadersVisible = false;
+            this.dgvPatients.RowTemplate.Height = 24;
+            this.dgvPatients.Size = new System.Drawing.Size(845, 324);
+            this.dgvPatients.TabIndex = 16;
+            this.dgvPatients.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvPatients.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPatients.ThemeStyle.HeaderStyle.Height = 4;
+            this.dgvPatients.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPatients.ThemeStyle.RowsStyle.Height = 24;
             // 
-            // tbSearchPatient
+            // tbPatientSearchBar
             // 
-            this.tbSearchPatient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbSearchPatient.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbSearchPatient.DefaultText = "ادخل اسم المريض او رقم الهاتف";
-            this.tbSearchPatient.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbSearchPatient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbSearchPatient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbSearchPatient.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbSearchPatient.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbSearchPatient.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSearchPatient.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbSearchPatient.Location = new System.Drawing.Point(284, 36);
-            this.tbSearchPatient.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbSearchPatient.Name = "tbSearchPatient";
-            this.tbSearchPatient.PlaceholderText = "";
-            this.tbSearchPatient.SelectedText = "";
-            this.tbSearchPatient.Size = new System.Drawing.Size(553, 30);
-            this.tbSearchPatient.TabIndex = 15;
-            this.tbSearchPatient.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tbPatientSearchBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbPatientSearchBar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbPatientSearchBar.DefaultText = "ادخل اسم المريض او رقم الهاتف";
+            this.tbPatientSearchBar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbPatientSearchBar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbPatientSearchBar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbPatientSearchBar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbPatientSearchBar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbPatientSearchBar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPatientSearchBar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbPatientSearchBar.Location = new System.Drawing.Point(284, 36);
+            this.tbPatientSearchBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbPatientSearchBar.Name = "tbPatientSearchBar";
+            this.tbPatientSearchBar.PlaceholderText = "";
+            this.tbPatientSearchBar.SelectedText = "";
+            this.tbPatientSearchBar.Size = new System.Drawing.Size(553, 30);
+            this.tbPatientSearchBar.TabIndex = 15;
+            this.tbPatientSearchBar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // lblPatientSearch
             // 
@@ -265,7 +266,6 @@
             // 
             // btnClear
             // 
-            this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClear.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnClear.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnClear.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -293,12 +293,12 @@
             this.Controls.Add(this.btnDeletePatient);
             this.Controls.Add(this.btnAddPatient);
             this.Controls.Add(this.lblNote);
-            this.Controls.Add(this.guna2DataGridView1);
-            this.Controls.Add(this.tbSearchPatient);
+            this.Controls.Add(this.dgvPatients);
+            this.Controls.Add(this.tbPatientSearchBar);
             this.Controls.Add(this.lblPatientSearch);
             this.Name = "ucPatients";
             this.Size = new System.Drawing.Size(1169, 697);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPatients)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -315,8 +315,8 @@
         private Guna.UI2.WinForms.Guna2Button btnDeletePatient;
         private Guna.UI2.WinForms.Guna2Button btnAddPatient;
         private System.Windows.Forms.Label lblNote;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
-        private Guna.UI2.WinForms.Guna2TextBox tbSearchPatient;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvPatients;
+        private Guna.UI2.WinForms.Guna2TextBox tbPatientSearchBar;
         private System.Windows.Forms.Label lblPatientSearch;
         private Guna.UI2.WinForms.Guna2Button btnClear;
     }

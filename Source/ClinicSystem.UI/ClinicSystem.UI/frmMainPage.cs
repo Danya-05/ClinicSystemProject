@@ -35,5 +35,11 @@ namespace ClinicSystem.UI
         {
             OpenUserControl(new ucPatients(), sender);
         }
+
+        private void btnAppointments_Click(object sender, EventArgs e)
+        {
+            OpenUserControl(new ucAppointments(), sender);
+
+        }
     }
 }

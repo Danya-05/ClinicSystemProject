@@ -94,7 +94,7 @@
             this.PanelTitleBar.Controls.Add(this.lblTitle);
             this.PanelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelTitleBar.Location = new System.Drawing.Point(0, 0);
-            this.PanelTitleBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PanelTitleBar.Margin = new System.Windows.Forms.Padding(4);
             this.PanelTitleBar.Name = "PanelTitleBar";
             this.PanelTitleBar.Size = new System.Drawing.Size(1169, 98);
             this.PanelTitleBar.TabIndex = 1;
@@ -116,7 +116,7 @@
             // 
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(0, 98);
-            this.panelDesktop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelDesktop.Margin = new System.Windows.Forms.Padding(4);
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(1169, 697);
             this.panelDesktop.TabIndex = 2;
@@ -246,6 +246,7 @@
             this.btnAppointments.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAppointments.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnAppointments.UseVisualStyleBackColor = true;
+            this.btnAppointments.Click += new System.EventHandler(this.btnAppointments_Click);
             // 
             // btnPatients
             // 
@@ -280,6 +281,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmMainMenu";
             this.Text = "frmMainPage";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.PanelMenu.ResumeLayout(false);
             this.PanelLogo.ResumeLayout(false);
             this.PanelLogo.PerformLayout();
