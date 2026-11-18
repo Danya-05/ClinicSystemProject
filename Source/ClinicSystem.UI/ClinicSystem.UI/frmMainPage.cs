@@ -39,7 +39,11 @@ namespace ClinicSystem.UI
         private void btnAppointments_Click(object sender, EventArgs e)
         {
             OpenUserControl(new ucAppointments(), sender);
+        }
 
+        private void btnVisits_Click(object sender, EventArgs e)
+        {
+            OpenUserControl(new ucVisits(), sender);
         }
     }
 }

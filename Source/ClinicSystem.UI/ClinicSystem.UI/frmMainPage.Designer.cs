@@ -58,10 +58,10 @@
             this.PanelMenu.Controls.Add(this.btnPatients);
             this.PanelMenu.Controls.Add(this.PanelLogo);
             this.PanelMenu.Dock = System.Windows.Forms.DockStyle.Right;
-            this.PanelMenu.Location = new System.Drawing.Point(1169, 0);
-            this.PanelMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PanelMenu.Location = new System.Drawing.Point(877, 0);
+            this.PanelMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PanelMenu.Name = "PanelMenu";
-            this.PanelMenu.Size = new System.Drawing.Size(295, 795);
+            this.PanelMenu.Size = new System.Drawing.Size(221, 646);
             this.PanelMenu.TabIndex = 0;
             // 
             // PanelLogo
@@ -70,9 +70,9 @@
             this.PanelLogo.Controls.Add(this.label1);
             this.PanelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelLogo.Location = new System.Drawing.Point(0, 0);
-            this.PanelLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PanelLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PanelLogo.Name = "PanelLogo";
-            this.PanelLogo.Size = new System.Drawing.Size(295, 98);
+            this.PanelLogo.Size = new System.Drawing.Size(221, 80);
             this.PanelLogo.TabIndex = 1;
             // 
             // label1
@@ -81,8 +81,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.LightGray;
-            this.label1.Location = new System.Drawing.Point(100, 39);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(75, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 21);
             this.label1.TabIndex = 1;
@@ -94,9 +93,8 @@
             this.PanelTitleBar.Controls.Add(this.lblTitle);
             this.PanelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelTitleBar.Location = new System.Drawing.Point(0, 0);
-            this.PanelTitleBar.Margin = new System.Windows.Forms.Padding(4);
             this.PanelTitleBar.Name = "PanelTitleBar";
-            this.PanelTitleBar.Size = new System.Drawing.Size(1169, 98);
+            this.PanelTitleBar.Size = new System.Drawing.Size(877, 80);
             this.PanelTitleBar.TabIndex = 1;
             // 
             // lblTitle
@@ -105,8 +103,7 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(472, 31);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitle.Location = new System.Drawing.Point(354, 25);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(159, 30);
             this.lblTitle.TabIndex = 0;
@@ -115,10 +112,9 @@
             // panelDesktop
             // 
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(0, 98);
-            this.panelDesktop.Margin = new System.Windows.Forms.Padding(4);
+            this.panelDesktop.Location = new System.Drawing.Point(0, 80);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(1169, 697);
+            this.panelDesktop.Size = new System.Drawing.Size(877, 566);
             this.panelDesktop.TabIndex = 2;
             // 
             // btnLogout
@@ -131,11 +127,11 @@
             this.btnLogout.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnLogout.Image = global::ClinicSystem.UI.Resources.log_out_outline_32;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLogout.Location = new System.Drawing.Point(0, 721);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLogout.Location = new System.Drawing.Point(0, 586);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Padding = new System.Windows.Forms.Padding(0, 0, 12, 0);
-            this.btnLogout.Size = new System.Drawing.Size(295, 74);
+            this.btnLogout.Padding = new System.Windows.Forms.Padding(0, 0, 9, 0);
+            this.btnLogout.Size = new System.Drawing.Size(221, 60);
             this.btnLogout.TabIndex = 9;
             this.btnLogout.Text = "تسجيل خروج";
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -152,11 +148,11 @@
             this.btnSettings.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnSettings.Image = global::ClinicSystem.UI.Resources.settings_outline_32;
             this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSettings.Location = new System.Drawing.Point(0, 468);
-            this.btnSettings.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSettings.Location = new System.Drawing.Point(0, 380);
+            this.btnSettings.Margin = new System.Windows.Forms.Padding(2);
             this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Padding = new System.Windows.Forms.Padding(0, 0, 12, 0);
-            this.btnSettings.Size = new System.Drawing.Size(295, 74);
+            this.btnSettings.Padding = new System.Windows.Forms.Padding(0, 0, 9, 0);
+            this.btnSettings.Size = new System.Drawing.Size(221, 60);
             this.btnSettings.TabIndex = 8;
             this.btnSettings.Text = "الاعدادات";
             this.btnSettings.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -173,11 +169,11 @@
             this.btnUsers.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnUsers.Image = global::ClinicSystem.UI.Resources.person_circle_outline_32;
             this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnUsers.Location = new System.Drawing.Point(0, 394);
-            this.btnUsers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUsers.Location = new System.Drawing.Point(0, 320);
+            this.btnUsers.Margin = new System.Windows.Forms.Padding(2);
             this.btnUsers.Name = "btnUsers";
-            this.btnUsers.Padding = new System.Windows.Forms.Padding(0, 0, 12, 0);
-            this.btnUsers.Size = new System.Drawing.Size(295, 74);
+            this.btnUsers.Padding = new System.Windows.Forms.Padding(0, 0, 9, 0);
+            this.btnUsers.Size = new System.Drawing.Size(221, 60);
             this.btnUsers.TabIndex = 7;
             this.btnUsers.Text = "المستخدمين";
             this.btnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -194,11 +190,11 @@
             this.btnPayments.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnPayments.Image = global::ClinicSystem.UI.Resources.cash_outline_32;
             this.btnPayments.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPayments.Location = new System.Drawing.Point(0, 320);
-            this.btnPayments.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPayments.Location = new System.Drawing.Point(0, 260);
+            this.btnPayments.Margin = new System.Windows.Forms.Padding(2);
             this.btnPayments.Name = "btnPayments";
-            this.btnPayments.Padding = new System.Windows.Forms.Padding(0, 0, 12, 0);
-            this.btnPayments.Size = new System.Drawing.Size(295, 74);
+            this.btnPayments.Padding = new System.Windows.Forms.Padding(0, 0, 9, 0);
+            this.btnPayments.Size = new System.Drawing.Size(221, 60);
             this.btnPayments.TabIndex = 6;
             this.btnPayments.Text = "الدفعات";
             this.btnPayments.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -215,16 +211,17 @@
             this.btnVisits.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnVisits.Image = global::ClinicSystem.UI.Resources.bed_outline_32;
             this.btnVisits.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnVisits.Location = new System.Drawing.Point(0, 246);
-            this.btnVisits.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnVisits.Location = new System.Drawing.Point(0, 200);
+            this.btnVisits.Margin = new System.Windows.Forms.Padding(2);
             this.btnVisits.Name = "btnVisits";
-            this.btnVisits.Padding = new System.Windows.Forms.Padding(0, 0, 12, 0);
-            this.btnVisits.Size = new System.Drawing.Size(295, 74);
+            this.btnVisits.Padding = new System.Windows.Forms.Padding(0, 0, 9, 0);
+            this.btnVisits.Size = new System.Drawing.Size(221, 60);
             this.btnVisits.TabIndex = 5;
             this.btnVisits.Text = "الزيارات";
             this.btnVisits.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVisits.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnVisits.UseVisualStyleBackColor = true;
+            this.btnVisits.Click += new System.EventHandler(this.btnVisits_Click);
             // 
             // btnAppointments
             // 
@@ -236,11 +233,11 @@
             this.btnAppointments.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnAppointments.Image = global::ClinicSystem.UI.Resources.calendar_32;
             this.btnAppointments.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAppointments.Location = new System.Drawing.Point(0, 172);
-            this.btnAppointments.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAppointments.Location = new System.Drawing.Point(0, 140);
+            this.btnAppointments.Margin = new System.Windows.Forms.Padding(2);
             this.btnAppointments.Name = "btnAppointments";
-            this.btnAppointments.Padding = new System.Windows.Forms.Padding(0, 0, 12, 0);
-            this.btnAppointments.Size = new System.Drawing.Size(295, 74);
+            this.btnAppointments.Padding = new System.Windows.Forms.Padding(0, 0, 9, 0);
+            this.btnAppointments.Size = new System.Drawing.Size(221, 60);
             this.btnAppointments.TabIndex = 4;
             this.btnAppointments.Text = "المواعيد";
             this.btnAppointments.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -258,11 +255,11 @@
             this.btnPatients.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnPatients.Image = global::ClinicSystem.UI.Resources.people_outline_32;
             this.btnPatients.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPatients.Location = new System.Drawing.Point(0, 98);
-            this.btnPatients.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPatients.Location = new System.Drawing.Point(0, 80);
+            this.btnPatients.Margin = new System.Windows.Forms.Padding(2);
             this.btnPatients.Name = "btnPatients";
-            this.btnPatients.Padding = new System.Windows.Forms.Padding(0, 0, 12, 0);
-            this.btnPatients.Size = new System.Drawing.Size(295, 74);
+            this.btnPatients.Padding = new System.Windows.Forms.Padding(0, 0, 9, 0);
+            this.btnPatients.Size = new System.Drawing.Size(221, 60);
             this.btnPatients.TabIndex = 3;
             this.btnPatients.Text = "المرضى";
             this.btnPatients.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -272,13 +269,13 @@
             // 
             // frmMainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1464, 795);
+            this.ClientSize = new System.Drawing.Size(1098, 646);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.PanelTitleBar);
             this.Controls.Add(this.PanelMenu);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmMainMenu";
             this.Text = "frmMainPage";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

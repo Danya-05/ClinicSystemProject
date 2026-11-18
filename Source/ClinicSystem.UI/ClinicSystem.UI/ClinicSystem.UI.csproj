@@ -77,6 +77,12 @@
     <Compile Include="UserControls\ucPatients.Designer.cs">
       <DependentUpon>ucPatients.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucVisits.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucVisits.Designer.cs">
+      <DependentUpon>ucVisits.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -107,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucPatients.resx">
       <DependentUpon>ucPatients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucVisits.resx">
+      <DependentUpon>ucVisits.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
