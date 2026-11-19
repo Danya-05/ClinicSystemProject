@@ -60,5 +60,18 @@ namespace ClinicSystem.UI
         {
             OpenUserControl(new ucSettings(), sender);
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("هل أنت متأكد أنك تريد تسجيل الخروج؟",
+                                                    "تأكيد تسجيل الخروج",
+                                    MessageBoxButtons.OKCancel,
+                                    MessageBoxIcon.Question);
+
+            if (result == DialogResult.OK)
+            {
+                this.Close();
+            }
+        }
     }
 }

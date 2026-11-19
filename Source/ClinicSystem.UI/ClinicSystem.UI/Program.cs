@@ -18,10 +18,13 @@ namespace ClinicSystem.UI
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            frmLogin login = new frmLogin();
-
-            if (login.ShowDialog() == DialogResult.OK)
+            while (true)
             {
+                frmLogin login = new frmLogin();
+
+                if (login.ShowDialog() != DialogResult.OK)
+                    break;
+
                 Application.Run(new frmMainMenu());
             }
         }
