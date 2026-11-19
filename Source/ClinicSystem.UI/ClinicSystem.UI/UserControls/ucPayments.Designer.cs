@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.plNumbers = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblScheduledCount = new System.Windows.Forms.Label();
-            this.lblCompleted = new System.Windows.Forms.Label();
-            this.lblScheduled = new System.Windows.Forms.Label();
+            this.lblMonthlyDuesCount = new System.Windows.Forms.Label();
+            this.lblTotalPayedCount = new System.Windows.Forms.Label();
+            this.lblMonthlyDues = new System.Windows.Forms.Label();
+            this.lblTotalPayed = new System.Windows.Forms.Label();
             this.btnEditPayment = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddPayment = new Guna.UI2.WinForms.Guna2Button();
             this.dgvPaymentsLog = new Guna.UI2.WinForms.Guna2DataGridView();
             this.lblPaymentsLog = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.cbSearchPatient = new System.Windows.Forms.ComboBox();
             this.plNumbers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPaymentsLog)).BeginInit();
             this.SuspendLayout();
@@ -48,54 +48,67 @@
             // plNumbers
             // 
             this.plNumbers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.plNumbers.Controls.Add(this.label1);
-            this.plNumbers.Controls.Add(this.lblScheduledCount);
-            this.plNumbers.Controls.Add(this.lblCompleted);
-            this.plNumbers.Controls.Add(this.lblScheduled);
+            this.plNumbers.Controls.Add(this.lblMonthlyDuesCount);
+            this.plNumbers.Controls.Add(this.lblTotalPayedCount);
+            this.plNumbers.Controls.Add(this.lblMonthlyDues);
+            this.plNumbers.Controls.Add(this.lblTotalPayed);
             this.plNumbers.Location = new System.Drawing.Point(52, 396);
             this.plNumbers.Margin = new System.Windows.Forms.Padding(2);
             this.plNumbers.Name = "plNumbers";
             this.plNumbers.Size = new System.Drawing.Size(345, 109);
             this.plNumbers.TabIndex = 51;
             // 
-            // lblScheduledCount
+            // lblMonthlyDuesCount
             // 
-            this.lblScheduledCount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblScheduledCount.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScheduledCount.ForeColor = System.Drawing.Color.Black;
-            this.lblScheduledCount.Location = new System.Drawing.Point(25, 27);
-            this.lblScheduledCount.Name = "lblScheduledCount";
-            this.lblScheduledCount.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblScheduledCount.Size = new System.Drawing.Size(74, 33);
-            this.lblScheduledCount.TabIndex = 31;
-            this.lblScheduledCount.Text = "10 دأ";
-            this.lblScheduledCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblMonthlyDuesCount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblMonthlyDuesCount.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMonthlyDuesCount.ForeColor = System.Drawing.Color.Black;
+            this.lblMonthlyDuesCount.Location = new System.Drawing.Point(25, 61);
+            this.lblMonthlyDuesCount.Name = "lblMonthlyDuesCount";
+            this.lblMonthlyDuesCount.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblMonthlyDuesCount.Size = new System.Drawing.Size(74, 33);
+            this.lblMonthlyDuesCount.TabIndex = 33;
+            this.lblMonthlyDuesCount.Text = "10 دأ";
+            this.lblMonthlyDuesCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblCompleted
+            // lblTotalPayedCount
             // 
-            this.lblCompleted.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblCompleted.AutoSize = true;
-            this.lblCompleted.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCompleted.ForeColor = System.Drawing.Color.Black;
-            this.lblCompleted.Location = new System.Drawing.Point(105, 61);
-            this.lblCompleted.Name = "lblCompleted";
-            this.lblCompleted.Size = new System.Drawing.Size(153, 25);
-            this.lblCompleted.TabIndex = 29;
-            this.lblCompleted.Text = ":  مستحقات الشهر";
-            this.lblCompleted.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblTotalPayedCount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTotalPayedCount.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalPayedCount.ForeColor = System.Drawing.Color.Black;
+            this.lblTotalPayedCount.Location = new System.Drawing.Point(25, 27);
+            this.lblTotalPayedCount.Name = "lblTotalPayedCount";
+            this.lblTotalPayedCount.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblTotalPayedCount.Size = new System.Drawing.Size(74, 33);
+            this.lblTotalPayedCount.TabIndex = 31;
+            this.lblTotalPayedCount.Text = "10 دأ";
+            this.lblTotalPayedCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblScheduled
+            // lblMonthlyDues
             // 
-            this.lblScheduled.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblScheduled.AutoSize = true;
-            this.lblScheduled.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScheduled.ForeColor = System.Drawing.Color.Black;
-            this.lblScheduled.Location = new System.Drawing.Point(105, 27);
-            this.lblScheduled.Name = "lblScheduled";
-            this.lblScheduled.Size = new System.Drawing.Size(228, 25);
-            this.lblScheduled.TabIndex = 28;
-            this.lblScheduled.Text = ": اجمالي المدفوع هذا الشهر";
-            this.lblScheduled.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblMonthlyDues.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblMonthlyDues.AutoSize = true;
+            this.lblMonthlyDues.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMonthlyDues.ForeColor = System.Drawing.Color.Black;
+            this.lblMonthlyDues.Location = new System.Drawing.Point(105, 61);
+            this.lblMonthlyDues.Name = "lblMonthlyDues";
+            this.lblMonthlyDues.Size = new System.Drawing.Size(153, 25);
+            this.lblMonthlyDues.TabIndex = 29;
+            this.lblMonthlyDues.Text = ":  مستحقات الشهر";
+            this.lblMonthlyDues.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // lblTotalPayed
+            // 
+            this.lblTotalPayed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTotalPayed.AutoSize = true;
+            this.lblTotalPayed.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalPayed.ForeColor = System.Drawing.Color.Black;
+            this.lblTotalPayed.Location = new System.Drawing.Point(105, 27);
+            this.lblTotalPayed.Name = "lblTotalPayed";
+            this.lblTotalPayed.Size = new System.Drawing.Size(228, 25);
+            this.lblTotalPayed.TabIndex = 28;
+            this.lblTotalPayed.Text = ": اجمالي المدفوع هذا الشهر";
+            this.lblTotalPayed.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // btnEditPayment
             // 
@@ -134,29 +147,29 @@
             // dgvPaymentsLog
             // 
             this.dgvPaymentsLog.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.dgvPaymentsLog.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvPaymentsLog.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPaymentsLog.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPaymentsLog.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPaymentsLog.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPaymentsLog.ColumnHeadersHeight = 4;
             this.dgvPaymentsLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPaymentsLog.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPaymentsLog.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPaymentsLog.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvPaymentsLog.Location = new System.Drawing.Point(106, 87);
             this.dgvPaymentsLog.Margin = new System.Windows.Forms.Padding(2);
@@ -184,37 +197,24 @@
             this.lblPaymentsLog.Text = " :  سجل الدفعات";
             this.lblPaymentsLog.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // comboBox1
+            // cbSearchPatient
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI Light", 11.25F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(482, 381);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.comboBox1.Size = new System.Drawing.Size(287, 28);
-            this.comboBox1.Sorted = true;
-            this.comboBox1.TabIndex = 52;
-            this.comboBox1.Text = "ابحث عن مريض";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(25, 61);
-            this.label1.Name = "label1";
-            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label1.Size = new System.Drawing.Size(74, 33);
-            this.label1.TabIndex = 33;
-            this.label1.Text = "10 دأ";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cbSearchPatient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbSearchPatient.Font = new System.Drawing.Font("Segoe UI Light", 11.25F);
+            this.cbSearchPatient.FormattingEnabled = true;
+            this.cbSearchPatient.Location = new System.Drawing.Point(482, 381);
+            this.cbSearchPatient.Name = "cbSearchPatient";
+            this.cbSearchPatient.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.cbSearchPatient.Size = new System.Drawing.Size(287, 28);
+            this.cbSearchPatient.Sorted = true;
+            this.cbSearchPatient.TabIndex = 52;
+            this.cbSearchPatient.Text = "ابحث عن مريض";
             // 
             // ucPayments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbSearchPatient);
             this.Controls.Add(this.plNumbers);
             this.Controls.Add(this.btnEditPayment);
             this.Controls.Add(this.btnAddPayment);
@@ -233,14 +233,14 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel plNumbers;
-        private System.Windows.Forms.Label lblScheduledCount;
-        private System.Windows.Forms.Label lblCompleted;
-        private System.Windows.Forms.Label lblScheduled;
+        private System.Windows.Forms.Label lblTotalPayedCount;
+        private System.Windows.Forms.Label lblMonthlyDues;
+        private System.Windows.Forms.Label lblTotalPayed;
         private Guna.UI2.WinForms.Guna2Button btnEditPayment;
         private Guna.UI2.WinForms.Guna2Button btnAddPayment;
         private Guna.UI2.WinForms.Guna2DataGridView dgvPaymentsLog;
         private System.Windows.Forms.Label lblPaymentsLog;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cbSearchPatient;
+        private System.Windows.Forms.Label lblMonthlyDuesCount;
     }
 }

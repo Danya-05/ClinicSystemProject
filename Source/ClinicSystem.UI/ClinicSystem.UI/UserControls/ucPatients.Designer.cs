@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnShowAllPayments = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddPayment = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddVisite = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddAppointment = new Guna.UI2.WinForms.Guna2Button();
             this.btnShowMedicalFile = new Guna.UI2.WinForms.Guna2Button();
-            this.btnEditPatient = new Guna.UI2.WinForms.Guna2Button();
             this.btnDeletePatient = new Guna.UI2.WinForms.Guna2Button();
+            this.btnEditPatient = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddPatient = new Guna.UI2.WinForms.Guna2Button();
             this.lblNote = new System.Windows.Forms.Label();
             this.dgvPatients = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -132,23 +132,6 @@
             this.btnShowMedicalFile.TabIndex = 21;
             this.btnShowMedicalFile.Text = "عرض الملف الطبي لمريض";
             // 
-            // btnEditPatient
-            // 
-            this.btnEditPatient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditPatient.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnEditPatient.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnEditPatient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnEditPatient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnEditPatient.FillColor = System.Drawing.Color.Silver;
-            this.btnEditPatient.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnEditPatient.ForeColor = System.Drawing.Color.Black;
-            this.btnEditPatient.Location = new System.Drawing.Point(307, 405);
-            this.btnEditPatient.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditPatient.Name = "btnEditPatient";
-            this.btnEditPatient.Size = new System.Drawing.Size(118, 50);
-            this.btnEditPatient.TabIndex = 20;
-            this.btnEditPatient.Text = "تعديل مريض";
-            // 
             // btnDeletePatient
             // 
             this.btnDeletePatient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -159,12 +142,29 @@
             this.btnDeletePatient.FillColor = System.Drawing.Color.Silver;
             this.btnDeletePatient.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnDeletePatient.ForeColor = System.Drawing.Color.Black;
-            this.btnDeletePatient.Location = new System.Drawing.Point(492, 405);
+            this.btnDeletePatient.Location = new System.Drawing.Point(307, 405);
             this.btnDeletePatient.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeletePatient.Name = "btnDeletePatient";
             this.btnDeletePatient.Size = new System.Drawing.Size(118, 50);
-            this.btnDeletePatient.TabIndex = 19;
+            this.btnDeletePatient.TabIndex = 20;
             this.btnDeletePatient.Text = "حذف مريض";
+            // 
+            // btnEditPatient
+            // 
+            this.btnEditPatient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditPatient.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEditPatient.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnEditPatient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEditPatient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEditPatient.FillColor = System.Drawing.Color.Silver;
+            this.btnEditPatient.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnEditPatient.ForeColor = System.Drawing.Color.Black;
+            this.btnEditPatient.Location = new System.Drawing.Point(492, 405);
+            this.btnEditPatient.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditPatient.Name = "btnEditPatient";
+            this.btnEditPatient.Size = new System.Drawing.Size(118, 50);
+            this.btnEditPatient.TabIndex = 19;
+            this.btnEditPatient.Text = "تعديل مريض";
             // 
             // btnAddPatient
             // 
@@ -199,29 +199,29 @@
             // dgvPatients
             // 
             this.dgvPatients.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgvPatients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvPatients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPatients.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPatients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPatients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPatients.ColumnHeadersHeight = 4;
             this.dgvPatients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPatients.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPatients.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPatients.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvPatients.Location = new System.Drawing.Point(122, 87);
             this.dgvPatients.Margin = new System.Windows.Forms.Padding(2);
@@ -297,8 +297,8 @@
             this.Controls.Add(this.btnAddVisite);
             this.Controls.Add(this.btnAddAppointment);
             this.Controls.Add(this.btnShowMedicalFile);
-            this.Controls.Add(this.btnEditPatient);
             this.Controls.Add(this.btnDeletePatient);
+            this.Controls.Add(this.btnEditPatient);
             this.Controls.Add(this.btnAddPatient);
             this.Controls.Add(this.lblNote);
             this.Controls.Add(this.dgvPatients);
@@ -320,8 +320,8 @@
         private Guna.UI2.WinForms.Guna2Button btnAddVisite;
         private Guna.UI2.WinForms.Guna2Button btnAddAppointment;
         private Guna.UI2.WinForms.Guna2Button btnShowMedicalFile;
-        private Guna.UI2.WinForms.Guna2Button btnEditPatient;
         private Guna.UI2.WinForms.Guna2Button btnDeletePatient;
+        private Guna.UI2.WinForms.Guna2Button btnEditPatient;
         private Guna.UI2.WinForms.Guna2Button btnAddPatient;
         private System.Windows.Forms.Label lblNote;
         private Guna.UI2.WinForms.Guna2DataGridView dgvPatients;

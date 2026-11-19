@@ -158,6 +158,7 @@
             this.btnSettings.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnSettings.UseVisualStyleBackColor = true;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // btnUsers
             // 
@@ -179,6 +180,7 @@
             this.btnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUsers.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnUsers.UseVisualStyleBackColor = true;
+            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
             // btnPayments
             // 
