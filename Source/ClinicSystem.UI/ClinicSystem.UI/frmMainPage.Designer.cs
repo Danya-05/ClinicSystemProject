@@ -59,7 +59,7 @@
             this.PanelMenu.Controls.Add(this.PanelLogo);
             this.PanelMenu.Dock = System.Windows.Forms.DockStyle.Right;
             this.PanelMenu.Location = new System.Drawing.Point(877, 0);
-            this.PanelMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelMenu.Margin = new System.Windows.Forms.Padding(2);
             this.PanelMenu.Name = "PanelMenu";
             this.PanelMenu.Size = new System.Drawing.Size(221, 646);
             this.PanelMenu.TabIndex = 0;
@@ -70,7 +70,7 @@
             this.PanelLogo.Controls.Add(this.label1);
             this.PanelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelLogo.Location = new System.Drawing.Point(0, 0);
-            this.PanelLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelLogo.Margin = new System.Windows.Forms.Padding(2);
             this.PanelLogo.Name = "PanelLogo";
             this.PanelLogo.Size = new System.Drawing.Size(221, 80);
             this.PanelLogo.TabIndex = 1;
@@ -200,6 +200,7 @@
             this.btnPayments.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPayments.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnPayments.UseVisualStyleBackColor = true;
+            this.btnPayments.Click += new System.EventHandler(this.btnPayments_Click);
             // 
             // btnVisits
             // 
@@ -275,7 +276,7 @@
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.PanelTitleBar);
             this.Controls.Add(this.PanelMenu);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmMainMenu";
             this.Text = "frmMainPage";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

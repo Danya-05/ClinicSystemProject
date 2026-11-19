@@ -77,6 +77,12 @@
     <Compile Include="UserControls\ucPatients.Designer.cs">
       <DependentUpon>ucPatients.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucPayments.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucPayments.Designer.cs">
+      <DependentUpon>ucPayments.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucVisits.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucPatients.resx">
       <DependentUpon>ucPatients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucPayments.resx">
+      <DependentUpon>ucPayments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucVisits.resx">
       <DependentUpon>ucVisits.cs</DependentUpon>

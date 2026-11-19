@@ -45,5 +45,10 @@ namespace ClinicSystem.UI
         {
             OpenUserControl(new ucVisits(), sender);
         }
+
+        private void btnPayments_Click(object sender, EventArgs e)
+        {
+            OpenUserControl(new ucPayments(), sender);
+        }
     }
 }
