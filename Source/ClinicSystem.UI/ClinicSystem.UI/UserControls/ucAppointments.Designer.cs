@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnClear = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddVisit = new Guna.UI2.WinForms.Guna2Button();
             this.btnEditAppointment = new Guna.UI2.WinForms.Guna2Button();
@@ -62,7 +62,7 @@
             this.btnClear.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnClear.ForeColor = System.Drawing.Color.Black;
             this.btnClear.Location = new System.Drawing.Point(122, 29);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(78, 24);
             this.btnClear.TabIndex = 39;
@@ -79,7 +79,7 @@
             this.btnAddVisit.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnAddVisit.ForeColor = System.Drawing.Color.Black;
             this.btnAddVisit.Location = new System.Drawing.Point(496, 487);
-            this.btnAddVisit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddVisit.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddVisit.Name = "btnAddVisit";
             this.btnAddVisit.Size = new System.Drawing.Size(118, 50);
             this.btnAddVisit.TabIndex = 34;
@@ -96,7 +96,7 @@
             this.btnEditAppointment.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnEditAppointment.ForeColor = System.Drawing.Color.Black;
             this.btnEditAppointment.Location = new System.Drawing.Point(668, 487);
-            this.btnEditAppointment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEditAppointment.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditAppointment.Name = "btnEditAppointment";
             this.btnEditAppointment.Size = new System.Drawing.Size(118, 50);
             this.btnEditAppointment.TabIndex = 33;
@@ -113,7 +113,7 @@
             this.btnCancelAppointment.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnCancelAppointment.ForeColor = System.Drawing.Color.Black;
             this.btnCancelAppointment.Location = new System.Drawing.Point(496, 405);
-            this.btnCancelAppointment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelAppointment.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelAppointment.Name = "btnCancelAppointment";
             this.btnCancelAppointment.Size = new System.Drawing.Size(118, 50);
             this.btnCancelAppointment.TabIndex = 32;
@@ -130,7 +130,7 @@
             this.btnAddAppointment.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnAddAppointment.ForeColor = System.Drawing.Color.Black;
             this.btnAddAppointment.Location = new System.Drawing.Point(668, 405);
-            this.btnAddAppointment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddAppointment.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddAppointment.Name = "btnAddAppointment";
             this.btnAddAppointment.Size = new System.Drawing.Size(118, 50);
             this.btnAddAppointment.TabIndex = 31;
@@ -152,32 +152,32 @@
             // dgvAppointments
             // 
             this.dgvAppointments.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.dgvAppointments.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvAppointments.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvAppointments.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAppointments.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAppointments.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvAppointments.ColumnHeadersHeight = 4;
             this.dgvAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAppointments.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAppointments.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvAppointments.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvAppointments.Location = new System.Drawing.Point(122, 87);
-            this.dgvAppointments.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvAppointments.Margin = new System.Windows.Forms.Padding(2);
             this.dgvAppointments.Name = "dgvAppointments";
             this.dgvAppointments.RowHeadersVisible = false;
             this.dgvAppointments.RowTemplate.Height = 24;
@@ -234,7 +234,7 @@
             this.plNumbers.Controls.Add(this.lblCompleted);
             this.plNumbers.Controls.Add(this.lblScheduled);
             this.plNumbers.Location = new System.Drawing.Point(122, 405);
-            this.plNumbers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.plNumbers.Margin = new System.Windows.Forms.Padding(2);
             this.plNumbers.Name = "plNumbers";
             this.plNumbers.Size = new System.Drawing.Size(283, 132);
             this.plNumbers.TabIndex = 40;
@@ -322,10 +322,11 @@
             this.dtpCalendar.Font = new System.Drawing.Font("Segoe UI Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpCalendar.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dtpCalendar.Location = new System.Drawing.Point(213, 29);
-            this.dtpCalendar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpCalendar.Margin = new System.Windows.Forms.Padding(2);
             this.dtpCalendar.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpCalendar.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpCalendar.Name = "dtpCalendar";
+            this.dtpCalendar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dtpCalendar.Size = new System.Drawing.Size(191, 24);
             this.dtpCalendar.TabIndex = 41;
             this.dtpCalendar.UseTransparentBackground = true;
@@ -346,7 +347,7 @@
             this.Controls.Add(this.dgvAppointments);
             this.Controls.Add(this.tbAppointmentSearchBar);
             this.Controls.Add(this.lblAppointmentSearch);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ucAppointments";
             this.Size = new System.Drawing.Size(877, 566);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).EndInit();

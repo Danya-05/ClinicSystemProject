@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClinicSystem.UI.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,5 +18,19 @@ namespace ClinicSystem.UI.UserControls
             InitializeComponent();
         }
 
+        private void btnAddPatient_Click(object sender, EventArgs e)
+        {
+            Forms.frmAddEditPatient frm = new frmAddEditPatient();
+            frm.StartPosition = FormStartPosition.CenterParent;
+            frm.ShowDialog(this);        
+        }
+
+        private void btnEditPatient_Click(object sender, EventArgs e)
+        {
+            Forms.frmAddEditPatient frm = new frmAddEditPatient();
+            frm.StartPosition = FormStartPosition.CenterParent;
+            frm.Text = "تعديل مريض";
+            frm.ShowDialog(this);
+        }
     }
 }
