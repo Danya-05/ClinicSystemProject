@@ -73,9 +73,9 @@
             this.lblPatientID.ForeColor = System.Drawing.Color.Black;
             this.lblPatientID.Location = new System.Drawing.Point(402, 29);
             this.lblPatientID.Name = "lblPatientID";
-            this.lblPatientID.Size = new System.Drawing.Size(116, 25);
+            this.lblPatientID.Size = new System.Drawing.Size(127, 25);
             this.lblPatientID.TabIndex = 33;
-            this.lblPatientID.Text = " : رقم مريض ";
+            this.lblPatientID.Text = " : رقم المريض ";
             this.lblPatientID.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblName

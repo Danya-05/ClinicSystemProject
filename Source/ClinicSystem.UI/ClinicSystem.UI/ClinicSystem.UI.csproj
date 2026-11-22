@@ -54,11 +54,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\frmAddEditAppointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAddEditAppointment.Designer.cs">
+      <DependentUpon>frmAddEditAppointment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmAddEditPatient.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmAddEditPatient.Designer.cs">
       <DependentUpon>frmAddEditPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAddEditPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAddEditPayment.Designer.cs">
+      <DependentUpon>frmAddEditPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAddEditVisit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAddEditVisit.Designer.cs">
+      <DependentUpon>frmAddEditVisit.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmMedicalFile.cs">
       <SubType>Form</SubType>
@@ -121,8 +139,17 @@
     <Compile Include="UserControls\ucVisits.Designer.cs">
       <DependentUpon>ucVisits.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\frmAddEditAppointment.resx">
+      <DependentUpon>frmAddEditAppointment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmAddEditPatient.resx">
       <DependentUpon>frmAddEditPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAddEditPayment.resx">
+      <DependentUpon>frmAddEditPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAddEditVisit.resx">
+      <DependentUpon>frmAddEditVisit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMedicalFile.resx">
       <DependentUpon>frmMedicalFile.cs</DependentUpon>

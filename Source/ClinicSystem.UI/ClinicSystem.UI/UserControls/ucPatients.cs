@@ -59,5 +59,26 @@ namespace ClinicSystem.UI.UserControls
             frm.StartPosition = FormStartPosition.CenterParent;
             frm.ShowDialog(this);
         }
+
+        private void btnAddAppointment_Click(object sender, EventArgs e)
+        {
+            Forms.frmAddEditAppointment frm = new frmAddEditAppointment();
+            frm.StartPosition = FormStartPosition.CenterParent;
+            frm.ShowDialog(this);
+        }
+
+        private void btnAddVisite_Click(object sender, EventArgs e)
+        {
+            Forms.frmAddEditVisit frm = new frmAddEditVisit();
+            frm.StartPosition = FormStartPosition.CenterParent;
+            frm.ShowDialog(this);
+        }
+
+        private void btnAddPayment_Click(object sender, EventArgs e)
+        {
+            Forms.frmAddEditPayment frm = new frmAddEditPayment();
+            frm.StartPosition = FormStartPosition.CenterParent;
+            frm.ShowDialog(this);
+        }
     }
 }

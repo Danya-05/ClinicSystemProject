@@ -169,5 +169,15 @@ namespace ClinicSystem.UI {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] time_outline {
+            get {
+                object obj = ResourceManager.GetObject("time-outline", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }

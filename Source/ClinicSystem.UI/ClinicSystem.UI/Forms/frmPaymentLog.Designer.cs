@@ -132,11 +132,11 @@
             this.lblPatientID.AutoSize = true;
             this.lblPatientID.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPatientID.ForeColor = System.Drawing.Color.Black;
-            this.lblPatientID.Location = new System.Drawing.Point(557, 24);
+            this.lblPatientID.Location = new System.Drawing.Point(546, 24);
             this.lblPatientID.Name = "lblPatientID";
-            this.lblPatientID.Size = new System.Drawing.Size(116, 25);
+            this.lblPatientID.Size = new System.Drawing.Size(127, 25);
             this.lblPatientID.TabIndex = 39;
-            this.lblPatientID.Text = " : رقم مريض ";
+            this.lblPatientID.Text = " : رقم المريض ";
             this.lblPatientID.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // frmPaymentLog

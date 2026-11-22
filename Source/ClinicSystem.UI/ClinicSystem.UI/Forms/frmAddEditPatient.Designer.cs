@@ -75,9 +75,9 @@
             this.lblPatientID.ForeColor = System.Drawing.Color.Black;
             this.lblPatientID.Location = new System.Drawing.Point(507, 18);
             this.lblPatientID.Name = "lblPatientID";
-            this.lblPatientID.Size = new System.Drawing.Size(116, 25);
+            this.lblPatientID.Size = new System.Drawing.Size(127, 25);
             this.lblPatientID.TabIndex = 15;
-            this.lblPatientID.Text = " : رقم مريض ";
+            this.lblPatientID.Text = " : رقم المريض ";
             this.lblPatientID.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblPatientIDNum
@@ -207,7 +207,7 @@
             this.dtpBirthDate.Checked = true;
             this.dtpBirthDate.FillColor = System.Drawing.Color.LightGray;
             this.dtpBirthDate.Font = new System.Drawing.Font("Segoe UI Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpBirthDate.Location = new System.Drawing.Point(257, 181);
             this.dtpBirthDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtpBirthDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
@@ -456,7 +456,7 @@
             this.dtpExpier.Checked = true;
             this.dtpExpier.FillColor = System.Drawing.Color.LightGray;
             this.dtpExpier.Font = new System.Drawing.Font("Segoe UI Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpExpier.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpExpier.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpExpier.Location = new System.Drawing.Point(93, 115);
             this.dtpExpier.Margin = new System.Windows.Forms.Padding(2);
             this.dtpExpier.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
