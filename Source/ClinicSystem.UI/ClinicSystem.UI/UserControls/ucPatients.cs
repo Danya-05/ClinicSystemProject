@@ -32,5 +32,32 @@ namespace ClinicSystem.UI.UserControls
             frm.Text = "تعديل مريض";
             frm.ShowDialog(this);
         }
+
+        private void btnDeletePatient_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("هل أنت متأكد أنك تريد حذف (اسم المريض) ؟",
+                                                    "حذف مريض",
+                                    MessageBoxButtons.OKCancel,
+                                    MessageBoxIcon.Warning);
+
+            if (result == DialogResult.OK)
+            {
+
+            }
+        }
+
+        private void btnShowMedicalFile_Click(object sender, EventArgs e)
+        {
+            Forms.frmMedicalFile frm = new frmMedicalFile();
+            frm.StartPosition = FormStartPosition.CenterParent;
+            frm.ShowDialog(this);
+        }
+
+        private void btnShowAllPayments_Click(object sender, EventArgs e)
+        {
+            Forms.frmPaymentLog frm = new frmPaymentLog();
+            frm.StartPosition = FormStartPosition.CenterParent;
+            frm.ShowDialog(this);
+        }
     }
 }
