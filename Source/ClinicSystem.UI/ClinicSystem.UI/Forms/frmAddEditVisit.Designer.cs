@@ -286,6 +286,7 @@
             this.btnShowMedicalFile.Size = new System.Drawing.Size(138, 70);
             this.btnShowMedicalFile.TabIndex = 78;
             this.btnShowMedicalFile.Text = "عرض ملف المريض";
+            this.btnShowMedicalFile.Click += new System.EventHandler(this.btnShowMedicalFile_Click);
             // 
             // lblNotes
             // 
@@ -375,7 +376,7 @@
             this.Controls.Add(this.lblAppointmentIDNum);
             this.Controls.Add(this.lblAppointmentID);
             this.Name = "frmAddEditVisit";
-            this.Text = "frmAddEditVisit";
+            this.Text = "اضافة زيارة";
             this.ResumeLayout(false);
             this.PerformLayout();
 
