@@ -28,146 +28,146 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnEditPatient = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAddPatient = new Guna.UI2.WinForms.Guna2Button();
-            this.tbPatientSearchBar = new Guna.UI2.WinForms.Guna2TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.lblClinicName = new System.Windows.Forms.Label();
+            this.lblMainImage = new System.Windows.Forms.Label();
+            this.lblSmallImage = new System.Windows.Forms.Label();
+            this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSaveChanges = new Guna.UI2.WinForms.Guna2Button();
+            this.tbClinicName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.picbSmallImage = new System.Windows.Forms.PictureBox();
+            this.picbMainImage = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picbSmallImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbMainImage)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblTitle
+            // lblClinicName
             // 
-            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.Black;
-            this.lblTitle.Location = new System.Drawing.Point(653, 68);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblTitle.Size = new System.Drawing.Size(129, 30);
-            this.lblTitle.TabIndex = 1;
-            this.lblTitle.Text = "اسم العيادة :";
+            this.lblClinicName.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblClinicName.AutoSize = true;
+            this.lblClinicName.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClinicName.ForeColor = System.Drawing.Color.Black;
+            this.lblClinicName.Location = new System.Drawing.Point(653, 68);
+            this.lblClinicName.Name = "lblClinicName";
+            this.lblClinicName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblClinicName.Size = new System.Drawing.Size(160, 37);
+            this.lblClinicName.TabIndex = 1;
+            this.lblClinicName.Text = "اسم العيادة :";
             // 
-            // label1
+            // lblMainImage
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(617, 146);
-            this.label1.Name = "label1";
-            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label1.Size = new System.Drawing.Size(165, 30);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "الصورة الرئيسية :";
+            this.lblMainImage.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblMainImage.AutoSize = true;
+            this.lblMainImage.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMainImage.ForeColor = System.Drawing.Color.Black;
+            this.lblMainImage.Location = new System.Drawing.Point(617, 146);
+            this.lblMainImage.Name = "lblMainImage";
+            this.lblMainImage.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblMainImage.Size = new System.Drawing.Size(207, 37);
+            this.lblMainImage.TabIndex = 2;
+            this.lblMainImage.Text = "الصورة الرئيسية :";
             // 
-            // label2
+            // lblSmallImage
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(617, 348);
-            this.label2.Name = "label2";
-            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label2.Size = new System.Drawing.Size(174, 30);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "الصورة المصغرة :";
+            this.lblSmallImage.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblSmallImage.AutoSize = true;
+            this.lblSmallImage.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSmallImage.ForeColor = System.Drawing.Color.Black;
+            this.lblSmallImage.Location = new System.Drawing.Point(617, 348);
+            this.lblSmallImage.Name = "lblSmallImage";
+            this.lblSmallImage.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblSmallImage.Size = new System.Drawing.Size(216, 37);
+            this.lblSmallImage.TabIndex = 3;
+            this.lblSmallImage.Text = "الصورة المصغرة :";
             // 
-            // btnEditPatient
+            // btnEdit
             // 
-            this.btnEditPatient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditPatient.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnEditPatient.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnEditPatient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnEditPatient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnEditPatient.FillColor = System.Drawing.Color.Silver;
-            this.btnEditPatient.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnEditPatient.ForeColor = System.Drawing.Color.Black;
-            this.btnEditPatient.Location = new System.Drawing.Point(37, 471);
-            this.btnEditPatient.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditPatient.Name = "btnEditPatient";
-            this.btnEditPatient.Size = new System.Drawing.Size(118, 50);
-            this.btnEditPatient.TabIndex = 21;
-            this.btnEditPatient.Text = "حفظ";
+            this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEdit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEdit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnEdit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEdit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEdit.FillColor = System.Drawing.Color.Silver;
+            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnEdit.ForeColor = System.Drawing.Color.Black;
+            this.btnEdit.Location = new System.Drawing.Point(37, 471);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(118, 50);
+            this.btnEdit.TabIndex = 21;
+            this.btnEdit.Text = "تعديل";
             // 
-            // btnAddPatient
+            // btnSaveChanges
             // 
-            this.btnAddPatient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddPatient.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddPatient.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddPatient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddPatient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddPatient.FillColor = System.Drawing.Color.Silver;
-            this.btnAddPatient.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnAddPatient.ForeColor = System.Drawing.Color.Black;
-            this.btnAddPatient.Location = new System.Drawing.Point(222, 471);
-            this.btnAddPatient.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAddPatient.Name = "btnAddPatient";
-            this.btnAddPatient.Size = new System.Drawing.Size(118, 50);
-            this.btnAddPatient.TabIndex = 20;
-            this.btnAddPatient.Text = "تعديل";
+            this.btnSaveChanges.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSaveChanges.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSaveChanges.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSaveChanges.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSaveChanges.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSaveChanges.FillColor = System.Drawing.Color.Silver;
+            this.btnSaveChanges.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnSaveChanges.ForeColor = System.Drawing.Color.Black;
+            this.btnSaveChanges.Location = new System.Drawing.Point(222, 471);
+            this.btnSaveChanges.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSaveChanges.Name = "btnSaveChanges";
+            this.btnSaveChanges.Size = new System.Drawing.Size(118, 50);
+            this.btnSaveChanges.TabIndex = 20;
+            this.btnSaveChanges.Text = "حفظ";
             // 
-            // tbPatientSearchBar
+            // tbClinicName
             // 
-            this.tbPatientSearchBar.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.tbPatientSearchBar.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbPatientSearchBar.DefaultText = "";
-            this.tbPatientSearchBar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbPatientSearchBar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbPatientSearchBar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbPatientSearchBar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbPatientSearchBar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbPatientSearchBar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPatientSearchBar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbPatientSearchBar.Location = new System.Drawing.Point(346, 68);
-            this.tbPatientSearchBar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tbPatientSearchBar.Name = "tbPatientSearchBar";
-            this.tbPatientSearchBar.PlaceholderText = "";
-            this.tbPatientSearchBar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tbPatientSearchBar.SelectedText = "";
-            this.tbPatientSearchBar.Size = new System.Drawing.Size(258, 36);
-            this.tbPatientSearchBar.TabIndex = 22;
+            this.tbClinicName.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.tbClinicName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbClinicName.DefaultText = "";
+            this.tbClinicName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbClinicName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbClinicName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbClinicName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbClinicName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbClinicName.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbClinicName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbClinicName.Location = new System.Drawing.Point(346, 68);
+            this.tbClinicName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.tbClinicName.Name = "tbClinicName";
+            this.tbClinicName.PlaceholderText = "";
+            this.tbClinicName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbClinicName.SelectedText = "";
+            this.tbClinicName.Size = new System.Drawing.Size(258, 36);
+            this.tbClinicName.TabIndex = 22;
             // 
-            // pictureBox2
+            // picbSmallImage
             // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBox2.Location = new System.Drawing.Point(515, 348);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(89, 82);
-            this.pictureBox2.TabIndex = 24;
-            this.pictureBox2.TabStop = false;
+            this.picbSmallImage.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.picbSmallImage.Location = new System.Drawing.Point(515, 348);
+            this.picbSmallImage.Name = "picbSmallImage";
+            this.picbSmallImage.Size = new System.Drawing.Size(89, 82);
+            this.picbSmallImage.TabIndex = 24;
+            this.picbSmallImage.TabStop = false;
             // 
-            // pictureBox1
+            // picbMainImage
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBox1.Location = new System.Drawing.Point(424, 157);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(180, 146);
-            this.pictureBox1.TabIndex = 23;
-            this.pictureBox1.TabStop = false;
+            this.picbMainImage.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.picbMainImage.Location = new System.Drawing.Point(424, 157);
+            this.picbMainImage.Name = "picbMainImage";
+            this.picbMainImage.Size = new System.Drawing.Size(180, 146);
+            this.picbMainImage.TabIndex = 23;
+            this.picbMainImage.TabStop = false;
             // 
             // ucSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.tbPatientSearchBar);
-            this.Controls.Add(this.btnEditPatient);
-            this.Controls.Add(this.btnAddPatient);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.picbSmallImage);
+            this.Controls.Add(this.picbMainImage);
+            this.Controls.Add(this.tbClinicName);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnSaveChanges);
+            this.Controls.Add(this.lblSmallImage);
+            this.Controls.Add(this.lblMainImage);
+            this.Controls.Add(this.lblClinicName);
             this.Name = "ucSettings";
             this.Size = new System.Drawing.Size(877, 566);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbSmallImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbMainImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,13 +175,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2Button btnEditPatient;
-        private Guna.UI2.WinForms.Guna2Button btnAddPatient;
-        private Guna.UI2.WinForms.Guna2TextBox tbPatientSearchBar;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lblClinicName;
+        private System.Windows.Forms.Label lblMainImage;
+        private System.Windows.Forms.Label lblSmallImage;
+        private Guna.UI2.WinForms.Guna2Button btnEdit;
+        private Guna.UI2.WinForms.Guna2Button btnSaveChanges;
+        private Guna.UI2.WinForms.Guna2TextBox tbClinicName;
+        private System.Windows.Forms.PictureBox picbMainImage;
+        private System.Windows.Forms.PictureBox picbSmallImage;
     }
 }

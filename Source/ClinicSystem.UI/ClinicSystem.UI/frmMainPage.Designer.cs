@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             this.PanelMenu = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.PanelLogo = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.PanelTitleBar = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.panelDesktop = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
@@ -41,6 +36,11 @@
             this.btnVisits = new System.Windows.Forms.Button();
             this.btnAppointments = new System.Windows.Forms.Button();
             this.btnPatients = new System.Windows.Forms.Button();
+            this.PanelLogo = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.lblClinicName = new System.Windows.Forms.Label();
+            this.PanelTitleBar = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.panelDesktop = new System.Windows.Forms.Panel();
             this.PanelMenu.SuspendLayout();
             this.PanelLogo.SuspendLayout();
             this.PanelTitleBar.SuspendLayout();
@@ -63,59 +63,6 @@
             this.PanelMenu.Name = "PanelMenu";
             this.PanelMenu.Size = new System.Drawing.Size(221, 646);
             this.PanelMenu.TabIndex = 0;
-            // 
-            // PanelLogo
-            // 
-            this.PanelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.PanelLogo.Controls.Add(this.label1);
-            this.PanelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelLogo.Location = new System.Drawing.Point(0, 0);
-            this.PanelLogo.Margin = new System.Windows.Forms.Padding(2);
-            this.PanelLogo.Name = "PanelLogo";
-            this.PanelLogo.Size = new System.Drawing.Size(221, 80);
-            this.PanelLogo.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.LightGray;
-            this.label1.Location = new System.Drawing.Point(75, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 21);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "عيادة عامة";
-            // 
-            // PanelTitleBar
-            // 
-            this.PanelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(110)))), ((int)(((byte)(171)))));
-            this.PanelTitleBar.Controls.Add(this.lblTitle);
-            this.PanelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelTitleBar.Location = new System.Drawing.Point(0, 0);
-            this.PanelTitleBar.Name = "PanelTitleBar";
-            this.PanelTitleBar.Size = new System.Drawing.Size(877, 80);
-            this.PanelTitleBar.TabIndex = 1;
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(354, 25);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(159, 30);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "الصفحة الرئيسية";
-            // 
-            // panelDesktop
-            // 
-            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(0, 80);
-            this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(877, 566);
-            this.panelDesktop.TabIndex = 2;
             // 
             // btnLogout
             // 
@@ -271,6 +218,59 @@
             this.btnPatients.UseVisualStyleBackColor = true;
             this.btnPatients.Click += new System.EventHandler(this.btnPatients_Click);
             // 
+            // PanelLogo
+            // 
+            this.PanelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.PanelLogo.Controls.Add(this.lblClinicName);
+            this.PanelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelLogo.Location = new System.Drawing.Point(0, 0);
+            this.PanelLogo.Margin = new System.Windows.Forms.Padding(2);
+            this.PanelLogo.Name = "PanelLogo";
+            this.PanelLogo.Size = new System.Drawing.Size(221, 80);
+            this.PanelLogo.TabIndex = 1;
+            // 
+            // lblClinicName
+            // 
+            this.lblClinicName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblClinicName.AutoSize = true;
+            this.lblClinicName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClinicName.ForeColor = System.Drawing.Color.LightGray;
+            this.lblClinicName.Location = new System.Drawing.Point(75, 32);
+            this.lblClinicName.Name = "lblClinicName";
+            this.lblClinicName.Size = new System.Drawing.Size(101, 28);
+            this.lblClinicName.TabIndex = 1;
+            this.lblClinicName.Text = "عيادة عامة";
+            // 
+            // PanelTitleBar
+            // 
+            this.PanelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(110)))), ((int)(((byte)(171)))));
+            this.PanelTitleBar.Controls.Add(this.lblTitle);
+            this.PanelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelTitleBar.Location = new System.Drawing.Point(0, 0);
+            this.PanelTitleBar.Name = "PanelTitleBar";
+            this.PanelTitleBar.Size = new System.Drawing.Size(877, 80);
+            this.PanelTitleBar.TabIndex = 1;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(354, 25);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(200, 37);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "الصفحة الرئيسية";
+            // 
+            // panelDesktop
+            // 
+            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesktop.Location = new System.Drawing.Point(0, 80);
+            this.panelDesktop.Name = "panelDesktop";
+            this.panelDesktop.Size = new System.Drawing.Size(877, 566);
+            this.panelDesktop.TabIndex = 2;
+            // 
             // frmMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -305,7 +305,7 @@
         private System.Windows.Forms.Button btnAppointments;
         private Guna.UI2.WinForms.Guna2GradientPanel PanelTitleBar;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblClinicName;
         private System.Windows.Forms.Panel panelDesktop;
     }
 }

@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtpCalendar = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.btnClear = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddVisit = new Guna.UI2.WinForms.Guna2Button();
             this.btnEditVisit = new Guna.UI2.WinForms.Guna2Button();
-            this.btnShowVisit = new Guna.UI2.WinForms.Guna2Button();
+            this.btnShowVisitDetails = new Guna.UI2.WinForms.Guna2Button();
             this.lblNote = new System.Windows.Forms.Label();
             this.dgvVisits = new Guna.UI2.WinForms.Guna2DataGridView();
             this.tbVisitSearchBar = new Guna.UI2.WinForms.Guna2TextBox();
@@ -113,23 +113,23 @@
             this.btnEditVisit.Text = "تعديل زيارة";
             this.btnEditVisit.Click += new System.EventHandler(this.btnEditVisit_Click);
             // 
-            // btnShowVisit
+            // btnShowVisitDetails
             // 
-            this.btnShowVisit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnShowVisit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnShowVisit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnShowVisit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnShowVisit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnShowVisit.FillColor = System.Drawing.Color.Silver;
-            this.btnShowVisit.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnShowVisit.ForeColor = System.Drawing.Color.Black;
-            this.btnShowVisit.Location = new System.Drawing.Point(317, 405);
-            this.btnShowVisit.Margin = new System.Windows.Forms.Padding(2);
-            this.btnShowVisit.Name = "btnShowVisit";
-            this.btnShowVisit.Size = new System.Drawing.Size(118, 50);
-            this.btnShowVisit.TabIndex = 46;
-            this.btnShowVisit.Text = "عرض تفاصيل زيارة";
-            this.btnShowVisit.Click += new System.EventHandler(this.btnShowVisit_Click);
+            this.btnShowVisitDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnShowVisitDetails.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnShowVisitDetails.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnShowVisitDetails.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnShowVisitDetails.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnShowVisitDetails.FillColor = System.Drawing.Color.Silver;
+            this.btnShowVisitDetails.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnShowVisitDetails.ForeColor = System.Drawing.Color.Black;
+            this.btnShowVisitDetails.Location = new System.Drawing.Point(317, 405);
+            this.btnShowVisitDetails.Margin = new System.Windows.Forms.Padding(2);
+            this.btnShowVisitDetails.Name = "btnShowVisitDetails";
+            this.btnShowVisitDetails.Size = new System.Drawing.Size(118, 50);
+            this.btnShowVisitDetails.TabIndex = 46;
+            this.btnShowVisitDetails.Text = "عرض تفاصيل زيارة";
+            this.btnShowVisitDetails.Click += new System.EventHandler(this.btnShowVisit_Click);
             // 
             // lblNote
             // 
@@ -139,7 +139,7 @@
             this.lblNote.ForeColor = System.Drawing.Color.Black;
             this.lblNote.Location = new System.Drawing.Point(561, 362);
             this.lblNote.Name = "lblNote";
-            this.lblNote.Size = new System.Drawing.Size(214, 20);
+            this.lblNote.Size = new System.Drawing.Size(269, 25);
             this.lblNote.TabIndex = 45;
             this.lblNote.Text = " حدد الزيارة من الجدول قبل الاختيار *";
             this.lblNote.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -147,34 +147,35 @@
             // dgvVisits
             // 
             this.dgvVisits.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.dgvVisits.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvVisits.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvVisits.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvVisits.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvVisits.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvVisits.ColumnHeadersHeight = 4;
             this.dgvVisits.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvVisits.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvVisits.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvVisits.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvVisits.Location = new System.Drawing.Point(115, 87);
             this.dgvVisits.Margin = new System.Windows.Forms.Padding(2);
             this.dgvVisits.Name = "dgvVisits";
             this.dgvVisits.RowHeadersVisible = false;
+            this.dgvVisits.RowHeadersWidth = 51;
             this.dgvVisits.RowTemplate.Height = 24;
             this.dgvVisits.Size = new System.Drawing.Size(664, 263);
             this.dgvVisits.TabIndex = 44;
@@ -214,7 +215,7 @@
             this.lblVisitSearch.ForeColor = System.Drawing.Color.Black;
             this.lblVisitSearch.Location = new System.Drawing.Point(626, 29);
             this.lblVisitSearch.Name = "lblVisitSearch";
-            this.lblVisitSearch.Size = new System.Drawing.Size(148, 25);
+            this.lblVisitSearch.Size = new System.Drawing.Size(190, 32);
             this.lblVisitSearch.TabIndex = 42;
             this.lblVisitSearch.Text = " : البحث عن زيارة ";
             this.lblVisitSearch.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -227,7 +228,7 @@
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnAddVisit);
             this.Controls.Add(this.btnEditVisit);
-            this.Controls.Add(this.btnShowVisit);
+            this.Controls.Add(this.btnShowVisitDetails);
             this.Controls.Add(this.lblNote);
             this.Controls.Add(this.dgvVisits);
             this.Controls.Add(this.tbVisitSearchBar);
@@ -246,7 +247,7 @@
         private Guna.UI2.WinForms.Guna2Button btnClear;
         private Guna.UI2.WinForms.Guna2Button btnAddVisit;
         private Guna.UI2.WinForms.Guna2Button btnEditVisit;
-        private Guna.UI2.WinForms.Guna2Button btnShowVisit;
+        private Guna.UI2.WinForms.Guna2Button btnShowVisitDetails;
         private System.Windows.Forms.Label lblNote;
         private Guna.UI2.WinForms.Guna2DataGridView dgvVisits;
         private Guna.UI2.WinForms.Guna2TextBox tbVisitSearchBar;

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.pbClinicLogo = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.pnlSeparator = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.tbUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnLogin = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -42,21 +42,23 @@
             this.pbClinicLogo.BackColor = System.Drawing.Color.Transparent;
             this.pbClinicLogo.Image = global::ClinicSystem.UI.Resources.Green_and_Blue_Modern_Healthcare_Logo;
             this.pbClinicLogo.ImageRotate = 0F;
-            this.pbClinicLogo.Location = new System.Drawing.Point(631, 76);
+            this.pbClinicLogo.Location = new System.Drawing.Point(473, 62);
+            this.pbClinicLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbClinicLogo.Name = "pbClinicLogo";
             this.pbClinicLogo.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.pbClinicLogo.Size = new System.Drawing.Size(256, 236);
+            this.pbClinicLogo.Size = new System.Drawing.Size(192, 192);
             this.pbClinicLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbClinicLogo.TabIndex = 0;
             this.pbClinicLogo.TabStop = false;
             this.pbClinicLogo.UseTransparentBackground = true;
             // 
-            // guna2CustomGradientPanel1
+            // pnlSeparator
             // 
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(592, 70);
-            this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(3, 256);
-            this.guna2CustomGradientPanel1.TabIndex = 1;
+            this.pnlSeparator.Location = new System.Drawing.Point(444, 57);
+            this.pnlSeparator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlSeparator.Name = "pnlSeparator";
+            this.pnlSeparator.Size = new System.Drawing.Size(2, 208);
+            this.pnlSeparator.TabIndex = 1;
             // 
             // tbUsername
             // 
@@ -76,13 +78,13 @@
             this.tbUsername.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(35)))), ((int)(((byte)(110)))));
             this.tbUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbUsername.Location = new System.Drawing.Point(109, 95);
-            this.tbUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbUsername.Location = new System.Drawing.Point(82, 77);
+            this.tbUsername.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.PlaceholderText = "";
             this.tbUsername.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tbUsername.SelectedText = "";
-            this.tbUsername.Size = new System.Drawing.Size(433, 38);
+            this.tbUsername.Size = new System.Drawing.Size(325, 31);
             this.tbUsername.TabIndex = 2;
             // 
             // tbPassword
@@ -105,13 +107,13 @@
             this.tbPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbPassword.IconLeft = global::ClinicSystem.UI.Resources.eye_off;
             this.tbPassword.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
-            this.tbPassword.Location = new System.Drawing.Point(109, 166);
-            this.tbPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbPassword.Location = new System.Drawing.Point(82, 135);
+            this.tbPassword.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PlaceholderText = "";
             this.tbPassword.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tbPassword.SelectedText = "";
-            this.tbPassword.Size = new System.Drawing.Size(433, 38);
+            this.tbPassword.Size = new System.Drawing.Size(325, 31);
             this.tbPassword.TabIndex = 3;
             this.tbPassword.UseSystemPasswordChar = true;
             this.tbPassword.IconLeftClick += new System.EventHandler(this.PasswordTB_IconLeftClick);
@@ -129,9 +131,10 @@
             this.btnLogin.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(35)))), ((int)(((byte)(110)))));
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(346, 242);
+            this.btnLogin.Location = new System.Drawing.Point(260, 197);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(196, 57);
+            this.btnLogin.Size = new System.Drawing.Size(147, 46);
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "تسجيل دخول";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -149,27 +152,29 @@
             this.btnClose.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(35)))), ((int)(((byte)(110)))));
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(109, 242);
+            this.btnClose.Location = new System.Drawing.Point(82, 197);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(196, 57);
+            this.btnClose.Size = new System.Drawing.Size(147, 46);
             this.btnClose.TabIndex = 5;
             this.btnClose.Text = "اغلاق";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ClinicSystem.UI.Resources.LoginBackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(922, 413);
+            this.ClientSize = new System.Drawing.Size(692, 336);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.tbUsername);
-            this.Controls.Add(this.guna2CustomGradientPanel1);
+            this.Controls.Add(this.pnlSeparator);
             this.Controls.Add(this.pbClinicLogo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "تسجيل دخول";
@@ -181,7 +186,7 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2CirclePictureBox pbClinicLogo;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel pnlSeparator;
         private Guna.UI2.WinForms.Guna2TextBox tbUsername;
         private Guna.UI2.WinForms.Guna2TextBox tbPassword;
         private Guna.UI2.WinForms.Guna2GradientButton btnLogin;
