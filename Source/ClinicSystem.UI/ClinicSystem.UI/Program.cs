@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClinicSystem.UI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,16 @@ namespace ClinicSystem.UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            while (true)
+            {
+                frmLogin login = new frmLogin();
+
+                if (login.ShowDialog() != DialogResult.OK)
+                    break;
+
+                Application.Run(new frmMainMenu());
+            }
         }
     }
 }
